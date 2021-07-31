@@ -1,0 +1,64 @@
+
+main {
+    display: flex;
+    flex-direction: row-reverse;
+
+    height: 450px;
+}
+
+main > div {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    height: inherit;
+    width: 80%;
+
+    text-align: center;
+}
+
+main p {
+    font-size: x-large;
+
+    line-height: 50px;
+}
+
+main h2 {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-top: 20px;
+}
+/*************************************/
+aside {
+    b2ackground-color: #B7B5B3;
+
+    height: inherit;
+    width: 20%;
+
+    text-align: center;
+}
+
+aside a {
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #B80C09;
+
+    font-size: large;
+    font-weight: bold;
+    color: #E5E7E6;
+
+    display: block;
+
+    text-decoration: none;
+
+    padding: 7px;
+    margin: 5px;
+}
+
+aside a:hover {
+    background-color: #141301;
+}
+
+aside a:visited {
+    c2olor: #141301;
+}

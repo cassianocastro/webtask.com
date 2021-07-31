@@ -1,0 +1,16 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #E5E7E6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+h1, h2, h3 {
+    font-family: 'Staatliches', cursive;
+}

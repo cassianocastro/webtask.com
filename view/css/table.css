@@ -1,0 +1,20 @@
+table, th, tr, td {
+    border: thin solid black;
+}
+
+td {
+    text-align: center;
+}
+
+th {
+    background-color: coral;
+}
+
+fieldset {
+    display: flex;
+}
+
+#labels, #inputs{
+    display: flex;
+    flex-direction: column;
+}
