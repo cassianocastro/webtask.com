@@ -8,7 +8,7 @@ interface IDAO
 
     public function insert(array $array): bool;
 
-    public function getAll();
+    public function getAll(): array;
 
 }
 

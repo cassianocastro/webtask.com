@@ -23,19 +23,17 @@ class DistrictDAO implements IDAO
 
     public function insert(array $district): bool
     {
-        return mysqli_query(
-            $this->connection,
-            "insert into district (districtName, cityName) "
-            . "values ('$district[name]', '$district[cityName]')"
-        );
+        $statement = $this->connection->prepare("insert into district (districtName, cityName) values (?, ?)");
+        $statement->bindParam(1, $district["name"]);
+        $statement->bindParam(2, $district["cityName"]);
+        return $statement->execute();
     }
 
-    public function getAll()
+    public function getAll(): array
     {
-        return mysqli_query(
-            $this->connection,
-            "select * from district"
-        );
+        $statement = $this->connection->prepare("select * from district");
+        $statement->execute();
+        return $statement->fetchAll();
     }
 }
 

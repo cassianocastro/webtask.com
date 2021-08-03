@@ -23,23 +23,23 @@ class PersonDAO implements IDAO
 
     public function insert(array $person): bool
     {
-        return mysqli_query(
-            $this->connection,
-            "insert into people (firstName, lastName, age, childs) " .
-            "values (
-                '$person[nome]',
-                '$person[sobrenome]',
-                '$person[idade]',
-                '$person[filhos]'
-            )"
+        $statement = $this->connection->prepare(
+            "insert into people (firstName, lastName, age, childs)"
+            . " values (?, ?, ?, ?)"
         );
+        $statement->bindParam(1, $person["nome"]);
+        $statement->bindParam(2, $person["sobrenome"]);
+        $statement->bindParam(3, $person["idade"]);
+        $statement->bindParam(4, $person["filhos"]);
+        return $statement->execute();
     }
 
-    public function getAll()
+    public function getAll(): array
     {
-        return mysqli_query($this->connection, "select * from people");
+        $statement = $this->connection->prepare("select * from people");
+        $statement->execute();
+        return $statement->fetchAll();
     }
 }
-
 
 ?>

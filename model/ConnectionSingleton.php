@@ -9,12 +9,26 @@ class ConnectionSingleton
 
     private function __construct() {}
 
+    private function __clone(){}
+
+	public function __wakeup(){
+		throw new Exception("Cannot unserialize Singleton");
+	}
+
     public static function getInstance()
     {
-        if (self::$instance === null) {
-            self::$instance = mysqli_connect("localhost", "root", "", "webTask");
+        if (static::$instance === null) {
+            try {
+                static::$instance = new \PDO(
+                    "mysql:host=localhost;dbname=webTask",
+                    "root",
+                    ""
+                );
+            } catch (\PDOException $e) {
+                die("Error: " . $e->getMessage());
+            }
         }
-        return self::$instance;
+        return static::$instance;
     }
 }
 

@@ -23,18 +23,17 @@ class CityDAO implements IDAO
 
     public function insert(array $city): bool
     {
-        return mysqli_query(
-            $this->connection,
-            "insert into city (cityName, state) values ('$city[name]', '$city[state]')"
-        );
+        $statement = $this->connection->prepare("insert into city (cityName, state) values (?, ?)");
+        $statement->bindParam(1, $city["name"]);
+        $statement->bindParam(2, $city["state"]);
+        return $statement->execute();
     }
 
-    public function getAll()
+    public function getAll(): array
     {
-        return mysqli_query(
-            $this->connection,
-            "select * from city"
-        );
+        $statement = $this->connection->prepare("select * from city");
+        $statement->execute();
+        return $statement->fetchAll();
     }
 }
 

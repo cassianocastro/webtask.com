@@ -23,23 +23,25 @@ class EmployeeDAO implements IDAO
 
     public function insert(array $employee): bool
     {
-        return mysqli_query(
-            $this->connection,
-            "insert into employee (completeName, registration, admission, wage, childs, office) "
-            . "values (
-                '$employee[name]',
-                '$employee[registration]',
-                '$employee[admission]',
-                '$employee[wage]',
-                '$employee[sons]',
-                '$employee[office]'
-            )"
+        $statement = $this->connection->prepare(
+            "insert into"
+            . " employee (completeName, registration, admission, wage, childs, office)"
+            . " values (?, ?, ?, ?, ?, ?)"
         );
+        $statement->bindParam(1, $employee["name"]);
+        $statement->bindParam(2, $employee["registration"]);
+        $statement->bindParam(3, $employee["admission"]);
+        $statement->bindParam(4, $employee["wage"]);
+        $statement->bindParam(5, $employee["sons"]);
+        $statement->bindParam(6, $employee["office"]);
+        return $statement->execute();
     }
 
-    public function getAll()
+    public function getAll(): array
     {
-        return mysqli_query($this->connection, "select * from employee");
+        $statement = $this->connection->prepare("select * from employee");
+        $statement->execute();
+        return $statement->fetchAll();
     }
 }
 
