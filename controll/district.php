@@ -12,7 +12,7 @@ $district    = $_POST["district"];
 
 $districtDAO = new DistrictDAO();
 $wasInserted = $districtDAO->insert($district);
-$query       = $districtDAO->getAll();
+$resultSet   = $districtDAO->getAll();
 
 $caption = "Bairros cadastrados";
 $columns = array("districtID", "districtName", "cityName");

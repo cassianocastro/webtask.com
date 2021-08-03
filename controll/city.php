@@ -12,7 +12,7 @@ $city        = $_POST["city"];
 
 $cityDAO     = new CityDAO();
 $wasInserted = $cityDAO->insert($city);
-$query       = $cityDAO->getAll();
+$resultSet   = $cityDAO->getAll();
 
 $caption     = "Cidades cadastradas";
 $columns     = array("cityID", "cityName", "state");

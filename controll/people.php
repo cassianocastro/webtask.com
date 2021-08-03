@@ -7,7 +7,7 @@ require_once '../model/PersonDAO.php';
 $person      = $_POST["person"];
 $personDAO   = new PersonDAO();
 $wasInserted = $personDAO->insert($person);
-$query       = $personDAO->getAll();
+$resultSet   = $personDAO->getAll();
 
 $caption = "People";
 $columns = array(

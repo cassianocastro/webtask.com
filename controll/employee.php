@@ -16,7 +16,7 @@ $employee         = $_POST["employee"];
 $employee["wage"] = parser($employee["wage"]);
 $employeeDAO      = new EmployeeDAO();
 $wasInserted      = $employeeDAO->insert($employee);
-$query            = $employeeDAO->getAll();
+$resultSet        = $employeeDAO->getAll();
 
 $caption = "Funcionários cadastrados";
 $columns = array(
