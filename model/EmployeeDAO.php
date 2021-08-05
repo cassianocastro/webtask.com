@@ -1,12 +1,5 @@
 <?php
-namespace Model;
-use Model\{
-    IDAO,
-    ConnectionSingleton as Connection
-};
-
-require_once 'ConnectionSingleton.php';
-require_once 'IDAO.php';
+namespace model;
 
 /**
  *
@@ -16,24 +9,24 @@ class EmployeeDAO implements IDAO
 
     private $connection;
 
-    function __construct()
+    function __construct(DataBaseConnection $connection)
     {
-        $this->connection = Connection::getInstance();
+        $this->connection = $connection;
     }
 
-    public function insert(array $employee): bool
+    public function insert(array $array): bool
     {
         $statement = $this->connection->prepare(
             "insert into"
             . " employee (completeName, registration, admission, wage, childs, office)"
             . " values (?, ?, ?, ?, ?, ?)"
         );
-        $statement->bindParam(1, $employee["name"]);
-        $statement->bindParam(2, $employee["registration"]);
-        $statement->bindParam(3, $employee["admission"]);
-        $statement->bindParam(4, $employee["wage"]);
-        $statement->bindParam(5, $employee["sons"]);
-        $statement->bindParam(6, $employee["office"]);
+        $statement->bindParam(1, $array["name"]);
+        $statement->bindParam(2, $array["registration"]);
+        $statement->bindParam(3, $array["admission"]);
+        $statement->bindParam(4, $array["wage"]);
+        $statement->bindParam(5, $array["sons"]);
+        $statement->bindParam(6, $array["office"]);
         return $statement->execute();
     }
 

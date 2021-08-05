@@ -1,4 +1,6 @@
 <?php
+namespace lib;
+
 spl_autoload_register(
     function($className)
     {
@@ -9,4 +11,5 @@ spl_autoload_register(
         require $file;
     }
 );
+
 ?>

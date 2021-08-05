@@ -20,7 +20,7 @@
     <main>
         <section>
             <h2>Cadastro de Cidades</h2>
-            <form id="formCity" autocomplete="off" spellcheck="true" method="post" action="../../controll/city.php">
+            <form id="formCity" autocomplete="off" spellcheck="true" method="post" action="../../index.php">
                 <fieldset>
                     <legend>Preencha os campos com seu endereço</legend>
                     <label for="fieldCity">Cidade:</label>
@@ -70,7 +70,7 @@
                 </fieldset>
                 <menu>
                     <button type="reset">Limpar</button>
-                    <button type="submit">Salvar</button>
+                    <button type="submit" name="action" value="registerCity">Salvar</button>
                 </menu>
             </form>
         </section>

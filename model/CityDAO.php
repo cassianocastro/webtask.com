@@ -1,12 +1,5 @@
 <?php
-namespace Model;
-use Model\{
-    IDAO,
-    ConnectionSingleton as Connection
-};
-
-require_once 'ConnectionSingleton.php';
-require_once 'IDAO.php';
+namespace model;
 
 /**
  *
@@ -16,16 +9,18 @@ class CityDAO implements IDAO
 
     private $connection;
 
-    function __construct()
+    public function __construct($connection)
     {
-        $this->connection = Connection::getInstance();
+        $this->connection = $connection;
     }
 
-    public function insert(array $city): bool
+    public function insert(array $array): bool
     {
-        $statement = $this->connection->prepare("insert into city (cityName, state) values (?, ?)");
-        $statement->bindParam(1, $city["name"]);
-        $statement->bindParam(2, $city["state"]);
+        $statement = $this->connection->prepare(
+            "insert into city (cityName, state) values (?, ?)"
+        );
+        $statement->bindParam(1, $array["name"]);
+        $statement->bindParam(2, $array["state"]);
         return $statement->execute();
     }
 

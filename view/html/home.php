@@ -18,9 +18,10 @@
     <link rel="stylesheet" href="view/css/header.css">
     <link rel="stylesheet" href="view/css/main.css">
     <link rel="stylesheet" href="view/css/footer.css"> -->
+    <!-- <base href="view/html/" target="_blank"> -->
 </head>
 <body>
-    <?php include_once './templates/header.php'; ?>
+    <?php include_once 'templates/header.php'; ?>
     <main>
         <div>
             <section>
@@ -32,8 +33,8 @@
                 </p>
             </section>
         </div>
-        <?php include_once './templates/aside.php'; ?>
+        <?php include_once 'templates/aside.php'; ?>
     </main>
-    <?php include_once './templates/footer.php'; ?>
+    <?php include_once 'templates/footer.php'; ?>
 </body>
 </html>
