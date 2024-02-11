@@ -37,5 +37,3 @@ class EmployeeDAO implements IDAO
         return $statement->fetchAll();
     }
 }
-
-?>

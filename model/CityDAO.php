@@ -31,5 +31,3 @@ class CityDAO implements IDAO
         return $statement->fetchAll();
     }
 }
-
-?>

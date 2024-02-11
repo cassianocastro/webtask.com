@@ -31,5 +31,3 @@ class DistrictDAO implements IDAO
         return $statement->fetchAll();
     }
 }
-
-?>

@@ -11,5 +11,3 @@ $caption     = "Cidades cadastradas";
 $columns     = array("cityID", "cityName", "state");
 
 include_once '../view/html/result.php';
-
-?>

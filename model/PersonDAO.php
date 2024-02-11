@@ -34,5 +34,3 @@ class PersonDAO implements IDAO
         return $statement->fetchAll();
     }
 }
-
-?>

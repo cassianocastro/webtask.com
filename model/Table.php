@@ -33,5 +33,3 @@ class Table
         return $this->data;
     }
 }
-
-?>

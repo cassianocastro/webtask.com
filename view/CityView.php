@@ -16,5 +16,3 @@ class CityView
         require_once 'html/result.php';
     }
 }
-
-?>

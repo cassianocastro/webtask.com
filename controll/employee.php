@@ -32,5 +32,3 @@ $columns = array(
 echo ( $wasInserted ) ? "Registro inserido." : "Não foi possivel inserir.";
 
 include_once '../view/html/result.php';
-
-?>

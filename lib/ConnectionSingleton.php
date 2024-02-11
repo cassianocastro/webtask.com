@@ -31,5 +31,3 @@ class ConnectionSingleton
         return static::$instance;
     }
 }
-
-?>

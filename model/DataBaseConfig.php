@@ -56,5 +56,3 @@ final class DataBaseConfig
         return $this->port;
     }
 }
-
-?>

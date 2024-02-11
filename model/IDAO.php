@@ -11,5 +11,3 @@ interface IDAO
     public function getAll(): array;
 
 }
-
-?>

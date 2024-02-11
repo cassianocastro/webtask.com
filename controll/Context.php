@@ -25,5 +25,3 @@ class Context
         return $this->dao->getAll();
     }
 }
-
-?>

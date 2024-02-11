@@ -11,5 +11,3 @@ spl_autoload_register(
         require $file;
     }
 );
-
-?>
