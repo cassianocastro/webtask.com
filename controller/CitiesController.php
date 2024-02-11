@@ -6,7 +6,7 @@ use model\{ IDAO, Table };
 /**
  *
  */
-class CityController
+class CitiesController
 {
 
     private IDAO $cityDAO;
