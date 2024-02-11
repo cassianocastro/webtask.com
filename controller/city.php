@@ -1,5 +1,5 @@
 <?php
-namespace Controller;
+namespace controller;
 
 $city        = $_POST["city"];
 

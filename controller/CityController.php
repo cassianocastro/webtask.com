@@ -1,5 +1,5 @@
 <?php
-namespace controll;
+namespace controller;
 
 use model\{ IDAO, Table };
 
