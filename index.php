@@ -1,5 +1,5 @@
 <?php
-use controll\CityController;
+use controller\CityController;
 use view\CityView;
 use model\{ DataBaseConfig, DataBaseConnection, CityDAO };
 
