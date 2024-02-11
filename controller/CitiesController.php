@@ -1,7 +1,8 @@
 <?php
 namespace controller;
 
-use model\{ IDAO, Table };
+use model\{ DataBaseConfig, DataBaseConnection, CityDAO, Table };
+use view\CityView;
 
 /**
  *
@@ -9,28 +10,32 @@ use model\{ IDAO, Table };
 class CitiesController
 {
 
-    private IDAO $cityDAO;
-    private $cityView;
-
-    function __construct(IDAO $cityDAO, $cityView)
+    public function addCity(array $city): void
     {
-        $this->cityDAO  = $cityDAO;
-        $this->cityView = $cityView;
+        $config     = new DataBaseConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+        $connection = (new DataBaseConnection($config))->getConnection();
+        $inserted   = (new CityDAO($connection))->insert($city);
+
+        if ( $inserted )
+        {
+            // echo ( $inserted ) ? "Registro inserido." : "Não foi possivel inserir.";
+
+            $this->showCities();
+        }
     }
 
-    public function addCity(array $city): bool
+    public function showCities(): void
     {
-        $result = $this->cityDAO->insert($city);
+        $config     = new DataBaseConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+        $connection = (new DataBaseConnection($config))->getConnection();
+        $resultSet  = (new CityDAO($connection))->getAll();
 
-        return $result;
-    }
-
-    public function showCities()
-    {
-        $caption   = "Cidades cadastradas";
-        $columns   = array("cityID", "cityName", "state");
-        $resultSet = $this->cityDAO->getAll();
-
-        $this->cityView->render(new Table($caption, $columns, $resultSet));
+        (new CityView())->render(
+            new Table(
+                "Cidades cadastradas",
+                [ "cityID", "cityName", "state" ],
+                $resultSet
+            )
+        );
     }
 }
