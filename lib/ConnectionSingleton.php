@@ -1,6 +1,8 @@
 <?php
 namespace lib;
 
+use Exception, PDO, PDOException;
+
 /**
  *
  */
@@ -24,13 +26,13 @@ class ConnectionSingleton
         {
             try
             {
-                static::$instance = new \PDO(
+                static::$instance = new PDO(
                     "mysql:host=localhost;dbname=webTask",
                     "root",
                     ""
                 );
             }
-            catch ( \PDOException $e )
+            catch ( PDOException $e )
             {
                 die("Error: " . $e->getMessage());
             }
