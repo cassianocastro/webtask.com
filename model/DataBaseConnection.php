@@ -1,7 +1,7 @@
 <?php
 namespace model;
 
-use PDO;
+use PDO, PDOException;
 
 /**
  *
