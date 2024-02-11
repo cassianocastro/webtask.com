@@ -1,5 +1,5 @@
 <?php
-use controller\CityController;
+use controller\CitiesController;
 use view\CityView;
 use model\{ DataBaseConfig, DataBaseConnection, CityDAO };
 
@@ -14,7 +14,7 @@ $connection = (new DataBaseConnection($dbConfig))->getConnection();
 
 $cityDAO        = new CityDAO($connection);
 $cityView       = new CityView();
-$cityController = new CityController($cityDAO, $cityView);
+$cityController = new CitiesController($cityDAO, $cityView);
 
 $city        = $_POST["city"];
 $wasInserted = $cityController->registerCity($city);
