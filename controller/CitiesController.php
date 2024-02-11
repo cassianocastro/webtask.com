@@ -18,13 +18,14 @@ class CitiesController
         $this->cityView = $cityView;
     }
 
-    public function registerCity(array $city): bool
+    public function addCity(array $city): bool
     {
         $result = $this->cityDAO->insert($city);
+
         return $result;
     }
 
-    public function showResult()
+    public function showCities()
     {
         $caption   = "Cidades cadastradas";
         $columns   = array("cityID", "cityName", "state");
