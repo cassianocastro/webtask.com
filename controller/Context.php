@@ -1,6 +1,8 @@
 <?php
 namespace controller;
 
+use model\IDAO;
+
 /**
  *
  */
