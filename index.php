@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/lib/autoload.php';
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
+ini_set('display_errors', true);
+ini_set('display_startup_errors', true);
 error_reporting(E_ALL);
 
 /**
@@ -10,11 +10,11 @@ error_reporting(E_ALL);
  */
 function index(): void
 {
-    $city = [ "name" => "Quintão", "state" => "RS" ];
+    // $city = [ "name" => "Quintão", "state" => "RS" ];
 
-    (new controller\CitiesController())->addCity($city);
+    // (new controller\CitiesController())->addCity($city);
 
-    // require_once __DIR__ . '/view/html/home.php';
+    require_once __DIR__ . '/view/html/home.php';
 }
 
 index();
