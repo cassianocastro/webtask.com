@@ -32,8 +32,4 @@ if ($wasInserted) {
 // $personDAO   = new PersonDAO($connection);
 // $employeeDAO = new EmployeeDAO($connection);
 
-
 //require_once "view/html/home.php";
-
-
-?>
