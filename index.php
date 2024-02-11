@@ -1,13 +1,13 @@
 <?php
-use controller\CitiesController;
-use view\CityView;
-use model\{ DataBaseConfig, DataBaseConnection, CityDAO };
-
 require_once __DIR__ . '/lib/autoload.php';
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
+use controller\CitiesController;
+use view\CityView;
+use model\{ DataBaseConfig, DataBaseConnection, CityDAO };
 
 $dbConfig   = new DataBaseConfig("localhost", "mysql", "webTask", "php", "php", 3306);
 $connection = (new DataBaseConnection($dbConfig))->getConnection();
