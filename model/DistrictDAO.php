@@ -21,6 +21,7 @@ class DistrictDAO implements IDAO
         );
         $statement->bindParam(1, $array["name"]);
         $statement->bindParam(2, $array["cityName"]);
+
         return $statement->execute();
     }
 
@@ -28,6 +29,7 @@ class DistrictDAO implements IDAO
     {
         $statement = $this->connection->prepare("select * from district");
         $statement->execute();
+
         return $statement->fetchAll();
     }
 }

@@ -27,6 +27,7 @@ class EmployeeDAO implements IDAO
         $statement->bindParam(4, $array["wage"]);
         $statement->bindParam(5, $array["sons"]);
         $statement->bindParam(6, $array["office"]);
+
         return $statement->execute();
     }
 
@@ -34,6 +35,7 @@ class EmployeeDAO implements IDAO
     {
         $statement = $this->connection->prepare("select * from employee");
         $statement->execute();
+
         return $statement->fetchAll();
     }
 }

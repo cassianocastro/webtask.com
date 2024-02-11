@@ -24,6 +24,7 @@ class PersonDAO implements IDAO
         $statement->bindParam(2, $array["sobrenome"]);
         $statement->bindParam(3, $array["idade"]);
         $statement->bindParam(4, $array["filhos"]);
+
         return $statement->execute();
     }
 
@@ -31,6 +32,7 @@ class PersonDAO implements IDAO
     {
         $statement = $this->connection->prepare("select * from people");
         $statement->execute();
+
         return $statement->fetchAll();
     }
 }
