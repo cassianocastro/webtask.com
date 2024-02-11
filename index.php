@@ -13,7 +13,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$dbConfig   = new DataBaseConfig("localhost", "mysql", "webTask", "root", "", 3306);
+$dbConfig   = new DataBaseConfig("localhost", "mysql", "webTask", "php", "php", 3306);
 $connection = (new DataBaseConnection($dbConfig))->getConnection();
 
 $cityDAO         = new CityDAO($connection);
