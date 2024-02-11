@@ -17,12 +17,12 @@ $cityView       = new CityView();
 $cityController = new CitiesController($cityDAO, $cityView);
 
 $city        = $_POST["city"];
-$wasInserted = $cityController->registerCity($city);
+$wasInserted = $cityController->addCity($city);
 
 if ( $wasInserted )
 {
     //echo ( $wasInserted ) ? "Registro inserido." : "Não foi possivel inserir.";
-    $cityController->showResult();
+    $cityController->showCities();
 }
 
 //require_once "view/html/home.php";
