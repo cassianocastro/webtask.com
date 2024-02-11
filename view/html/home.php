@@ -12,13 +12,14 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap">
-  <!--
-    <link rel="stylesheet" href="view/css/reset.css">
-    <link rel="stylesheet" href="view/css/global.css">
-    <link rel="stylesheet" href="view/css/header.css">
-    <link rel="stylesheet" href="view/css/main.css">
-    <link rel="stylesheet" href="view/css/footer.css">
 
+  <link rel="stylesheet" href="view/css/reset.css">
+  <link rel="stylesheet" href="view/css/global.css">
+  <link rel="stylesheet" href="view/css/header.css">
+  <link rel="stylesheet" href="view/css/main.css">
+  <link rel="stylesheet" href="view/css/footer.css">
+
+  <!--
     <base href="view/html/" target="_blank">
   -->
   <title>Aplicação | Home</title>
