@@ -1,6 +1,8 @@
 <?php
 namespace view;
+
 use model\Table;
+
 /**
  *
  */
