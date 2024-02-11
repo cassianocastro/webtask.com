@@ -3,7 +3,7 @@ use controller\CityController;
 use view\CityView;
 use model\{ DataBaseConfig, DataBaseConnection, CityDAO };
 
-require_once 'lib/Loader.php';
+require_once __DIR__ . '/lib/autoload.php';
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
