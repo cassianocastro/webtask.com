@@ -1,4 +1,4 @@
-import {valueFieldIsValid as isValid} from "./functions.js";
+import { valueFieldIsValid as isValid } from "./functions.js";
 
 let mainForm = document.getElementById("formCity");
 
@@ -7,11 +7,15 @@ mainForm.onsubmit  = function (e) {
     let estado     = document.getElementById("fieldState");
     let fieldsOkay = true;
 
-    if (! isValid(nome))
-    fieldsOkay = false;
+    if ( ! isValid(nome) )
+    {
+        fieldsOkay = false;
+    }
 
-    if (! isValid(estado))
-    fieldsOkay = false;
+    if ( ! isValid(estado) )
+    {
+        fieldsOkay = false;
+    }
 
     return fieldsOkay;
 }

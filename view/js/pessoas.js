@@ -1,17 +1,26 @@
-import {valueFieldIsValid as isValid} from "./functions.js";
+import { valueFieldIsValid as isValid } from "./functions.js";
 
-function valueAgeisValid(field) {
-    let display = document.querySelector ("#" + field.id + " + .user-feedback");
-    if (field.value === ""){
+function valueAgeisValid(field)
+{
+    let display = document.querySelector("#" + field.id + " + .user-feedback");
+
+    if ( field.value === "" )
+    {
         addInvalidClassList(field, display);
+
         return false;
     }
-    if (field.value < 0) {
+
+    if ( field.value < 0 )
+    {
         addInvalidClassList(field, display);
         alert("Campo \"idade\" não pode ter valor menor que zero.");
+
         return false;
     }
+
     addValidClassList(field, display);
+
     return true;
 }
 
@@ -24,16 +33,25 @@ mainForm.onsubmit  = function (e) {
     let filhos     = document.getElementById("fieldSons");
     let fieldsOkay = true;
 
-    if (! isValid(nome))
-    fieldsOkay = false;
+    if ( ! isValid(nome) )
+    {
+        fieldsOkay = false;
+    }
 
-    if (! isValid(sobrenome))
-    fieldsOkay = false;
+    if ( ! isValid(sobrenome) )
+    {
+        fieldsOkay = false;
+    }
 
-    if (! valueAgeisValid(idade))
-    fieldsOkay = false;
+    if ( ! valueAgeisValid(idade) )
+    {
+        fieldsOkay = false;
+    }
 
-    if (! isValid(filhos))
-    fieldsOkay = false;
+    if ( ! isValid(filhos) )
+    {
+        fieldsOkay = false;
+    }
+
     return fieldsOkay;
 }
