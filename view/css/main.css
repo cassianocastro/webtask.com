@@ -32,10 +32,9 @@ main h2
     margin-top: 20px;
 }
 
-/*************************************/
 aside
 {
-    b2ackground-color: #B7B5B3;
+    /* background-color: #B7B5B3; */
 
     height: inherit;
     width: 20%;
@@ -68,5 +67,5 @@ aside a:hover
 
 aside a:visited
 {
-    c2olor: #141301;
+    /* color: #141301; */
 }
