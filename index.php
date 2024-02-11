@@ -9,8 +9,8 @@ use controller\CitiesController;
 use view\CityView;
 use model\{ DataBaseConfig, DataBaseConnection, CityDAO };
 
-$dbConfig   = new DataBaseConfig("localhost", "mysql", "webTask", "php", "php", 3306);
-$connection = (new DataBaseConnection($dbConfig))->getConnection();
+$config   = new DataBaseConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+$connection = (new DataBaseConnection($config))->getConnection();
 
 $cityDAO        = new CityDAO($connection);
 $cityView       = new CityView();
