@@ -1,9 +1,8 @@
 <?php
 namespace controll;
-use model\{
-    IDAO,
-    Table
-};
+
+use model\{ IDAO, Table };
+
 /**
  *
  */
@@ -33,5 +32,4 @@ class CityController
 
         $this->cityView->render(new Table($caption, $columns, $resultSet));
     }
-
 }

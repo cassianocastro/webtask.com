@@ -1,5 +1,6 @@
 <?php
 namespace Controller;
+
 use Model\EmployeeDAO;
 
 require_once '../model/EmployeeDAO.php';
@@ -8,7 +9,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_erros', 1);
 error_reporting(E_ALL);
 
-function parser($value){
+function parser($value)
+{
     return floatval($value);
 }
 
@@ -28,6 +30,7 @@ $columns = array(
     "childs",
     "office"
 );
+
 //"R$ " . number_format($register["wage"], 2, ",", ".")
 echo ( $wasInserted ) ? "Registro inserido." : "Não foi possivel inserir.";
 
