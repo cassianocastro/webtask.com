@@ -1,8 +1,8 @@
 <?php
-namespace lib;
+declare(strict_types=1);
 
 spl_autoload_register(
-    function($className)
+    function(string $className): void
     {
         $file = str_replace("\\", DIRECTORY_SEPARATOR, $className) . ".php";
 
