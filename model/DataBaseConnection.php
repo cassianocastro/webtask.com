@@ -1,6 +1,8 @@
 <?php
 namespace model;
-use \PDO;
+
+use PDO;
+
 /**
  *
  */
@@ -15,7 +17,8 @@ class DataBaseConnection
 
     public function getConnection()
     {
-        try {
+        try
+        {
             return new PDO(
                 $this->config->getDataBank()   . ":host="  .
                 $this->config->getHost() . ";" . "dbname=" .
@@ -23,7 +26,9 @@ class DataBaseConnection
                 $this->config->getUserName(),
                 $this->config->getPassword(),
             );
-        } catch (PDOException $e) {
+        }
+        catch ( PDOException $e )
+        {
             die($e->getMessage());
         }
     }
