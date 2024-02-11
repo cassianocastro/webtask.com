@@ -17,7 +17,7 @@ class DistrictDAO implements IDAO
     public function insert(array $array): bool
     {
         $statement = $this->connection->prepare(
-            "insert into district (districtName, cityName) values (?, ?)"
+            "INSERT INTO district(districtName, cityName) VALUES (?, ?)"
         );
         $statement->bindParam(1, $array["name"]);
         $statement->bindParam(2, $array["cityName"]);
@@ -27,7 +27,9 @@ class DistrictDAO implements IDAO
 
     public function getAll(): array
     {
-        $statement = $this->connection->prepare("select * from district");
+        $statement = $this->connection->prepare(
+            "SELECT * FROM district"
+        );
         $statement->execute();
 
         return $statement->fetchAll();

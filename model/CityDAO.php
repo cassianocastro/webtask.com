@@ -17,7 +17,7 @@ class CityDAO implements IDAO
     public function insert(array $array): bool
     {
         $statement = $this->connection->prepare(
-            "insert into city (cityName, state) values (?, ?)"
+            "INSERT INTO city (cityName, state) VALUES (?, ?)"
         );
         $statement->bindParam(1, $array["name"]);
         $statement->bindParam(2, $array["state"]);
@@ -27,7 +27,9 @@ class CityDAO implements IDAO
 
     public function getAll(): array
     {
-        $statement = $this->connection->prepare("select * from city");
+        $statement = $this->connection->prepare(
+            "SELECT * FROM city"
+        );
         $statement->execute();
 
         return $statement->fetchAll();

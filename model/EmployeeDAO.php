@@ -17,9 +17,12 @@ class EmployeeDAO implements IDAO
     public function insert(array $array): bool
     {
         $statement = $this->connection->prepare(
-            "insert into"
-            . " employee (completeName, registration, admission, wage, childs, office)"
-            . " values (?, ?, ?, ?, ?, ?)"
+            <<<SQL
+                INSERT INTO
+                    employee(completeName, registration, admission, wage, childs, office)
+                VALUES
+                    (?, ?, ?, ?, ?, ?)
+            SQL
         );
         $statement->bindParam(1, $array["name"]);
         $statement->bindParam(2, $array["registration"]);
@@ -33,7 +36,9 @@ class EmployeeDAO implements IDAO
 
     public function getAll(): array
     {
-        $statement = $this->connection->prepare("select * from employee");
+        $statement = $this->connection->prepare(
+            "SELECT * FROM employee"
+        );
         $statement->execute();
 
         return $statement->fetchAll();

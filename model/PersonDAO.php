@@ -17,8 +17,12 @@ class PersonDAO implements IDAO
     public function insert(array $array): bool
     {
         $statement = $this->connection->prepare(
-            "insert into people (firstName, lastName, age, childs)"
-            . " values (?, ?, ?, ?)"
+            <<<SQL
+                INSERT INTO
+                    people(firstName, lastName, age, childs)
+                VALUES
+                    (?, ?, ?, ?)
+            SQL
         );
         $statement->bindParam(1, $array["nome"]);
         $statement->bindParam(2, $array["sobrenome"]);
@@ -30,7 +34,9 @@ class PersonDAO implements IDAO
 
     public function getAll(): array
     {
-        $statement = $this->connection->prepare("select * from people");
+        $statement = $this->connection->prepare(
+            "SELECT * FROM people"
+        );
         $statement->execute();
 
         return $statement->fetchAll();
