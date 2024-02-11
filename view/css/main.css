@@ -1,11 +1,13 @@
-main {
+main
+{
     display: flex;
     flex-direction: row-reverse;
 
     height: 450px;
 }
 
-main>div {
+main > div
+{
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -16,20 +18,23 @@ main>div {
     text-align: center;
 }
 
-main p {
+main p
+{
     font-size: x-large;
 
     line-height: 50px;
 }
 
-main h2 {
+main h2
+{
     font-size: xx-large;
     font-weight: bold;
     margin-top: 20px;
 }
 
 /*************************************/
-aside {
+aside
+{
     b2ackground-color: #B7B5B3;
 
     height: inherit;
@@ -38,7 +43,8 @@ aside {
     text-align: center;
 }
 
-aside a {
+aside a
+{
     border: 1px solid black;
     border-radius: 3px;
     background-color: #B80C09;
@@ -55,10 +61,12 @@ aside a {
     margin: 5px;
 }
 
-aside a:hover {
+aside a:hover
+{
     background-color: #141301;
 }
 
-aside a:visited {
+aside a:visited
+{
     c2olor: #141301;
 }

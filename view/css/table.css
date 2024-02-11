@@ -1,20 +1,25 @@
-table, th, tr, td {
+table, th, tr, td
+{
     border: thin solid black;
 }
 
-td {
+td
+{
     text-align: center;
 }
 
-th {
+th
+{
     background-color: coral;
 }
 
-fieldset {
+fieldset
+{
     display: flex;
 }
 
-#labels, #inputs{
+#labels, #inputs
+{
     display: flex;
     flex-direction: column;
 }
