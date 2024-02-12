@@ -7,24 +7,18 @@ import { valueFieldIsValid as isValid } from "./functions.js";
  */
 function index()
 {
-    const form = document.getElementById("formCity");
+    const form = document.querySelector("#fc");
 
     form.addEventListener("submit", () => {
-        let nome       = document.getElementById("fieldCity");
-        let estado     = document.getElementById("fieldState");
-        let fieldsOkay = true;
+        let nome   = document.querySelector("fieldCity");
+        let estado = document.querySelector("fieldState");
 
-        if ( ! isValid(nome) )
+        if ( ! isValid(nome) || ! isValid(estado) )
         {
-            fieldsOkay = false;
+            return false;
         }
 
-        if ( ! isValid(estado) )
-        {
-            fieldsOkay = false;
-        }
-
-        return fieldsOkay;
+        return true;
     });
 }
 
