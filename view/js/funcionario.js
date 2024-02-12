@@ -1,3 +1,5 @@
+"use strict";
+
 import { valueFieldIsValid as isValid } from "./functions.js";
 
 let mainForm = document.getElementById("employeeForm");
