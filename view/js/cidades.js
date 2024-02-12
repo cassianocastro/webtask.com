@@ -7,9 +7,9 @@ import { valueFieldIsValid as isValid } from "./functions.js";
  */
 function index()
 {
-    let mainForm = document.getElementById("formCity");
+    const form = document.getElementById("formCity");
 
-    mainForm.onsubmit  = function (e) {
+    form.onsubmit  = function (e) {
         let nome       = document.getElementById("fieldCity");
         let estado     = document.getElementById("fieldState");
         let fieldsOkay = true;
