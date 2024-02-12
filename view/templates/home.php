@@ -25,7 +25,7 @@
   <title>Aplicação | Home</title>
 </head>
 <body>
-  <?php require_once __DIR__ . '/includes/header.php'; ?>
+  <?php require_once __DIR__ . '/includes/header/index.php'; ?>
 
   <main>
     <div>
@@ -40,10 +40,10 @@
       </section>
     </div>
 
-    <?php require_once __DIR__ . '/includes/aside.php'; ?>
+    <?php require_once __DIR__ . '/includes/aside/index.php'; ?>
 
   </main>
 
-  <?php require_once __DIR__ . '/includes/footer.php'; ?>
+  <?php require_once __DIR__ . '/includes/footer/index.php'; ?>
 </body>
 </html>
