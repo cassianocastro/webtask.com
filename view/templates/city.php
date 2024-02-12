@@ -27,7 +27,7 @@
 
           <h2>Cadastro de Cidades</h2>
 
-          <form id="formCity" autocomplete="off" spellcheck="true" method="post" action="../../index.php">
+          <form id="fc" autocomplete="off" spellcheck="true" method="post" action="../../index.php">
             <div>
               <fieldset>
                 <legend>Preencha os campos com seu endereço</legend>
