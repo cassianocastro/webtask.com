@@ -10,8 +10,8 @@ function index()
     const form = document.querySelector("#df");
 
     form.addEventListener("submit", () => {
-        let name = document.querySelector("input[name='district\[name\]']");
-        let city = document.querySelector("input[name='district\[cityName\]']");
+        let name = form.querySelector("input[name='district\[name\]']");
+        let city = form.querySelector("input[name='district\[cityName\]']");
 
         if ( ! isValid(name) || ! isValid(city) )
         {
