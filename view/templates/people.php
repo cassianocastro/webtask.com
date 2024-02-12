@@ -14,51 +14,72 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap">
 
-  <title>Aplicação | Pessoas</title>
+  <title>Pessoas | App</title>
 </head>
 <body>
   <?php require_once __DIR__ . '/includes/header/index.php'; ?>
 
   <main>
-    <section>
-      <h2>Cadastro de Pessoas</h2>
+    <div>
 
-      <form id="personForm" autocomplete="off" spellcheck="true" method="post" action="../../controll/people.php">
-        <fieldset>
-          <legend>Preencha os campos abaixo</legend>
+      <section>
+        <div>
 
-          <label for="fieldName">Nome</label>
-          <label for="fieldLastName">Sobrenome</label>
-          <label for="fieldAge">Idade Real</label>
-          <label for="fieldSons">Filhos</label>
+          <h2>Cadastro de Pessoas</h2>
 
-          <input required maxlength="50" type="text" id="fieldName" name="person[nome]">
+          <form id="pf" action="../../controller/PeopleController.php" method="post" autocomplete="off" spellcheck="true">
+            <div>
+              <fieldset>
+                <legend>Preencha os campos abaixo</legend>
 
-          <input required maxlength="100" type="text" id="fieldLastName" name="person[sobrenome]">
+                <label>
+                  <span>Nome</span>
 
-          <input required min="0" type="number" id="fieldAge" name="person[idade]">
+                  <input type="text" name="person[nome]" maxlength="50" required>
+                </label>
 
-          <select required id="fieldSons" name="person[filhos]">
-            <option value="0" selected>Nenhum</option>
-            <option value="1">1 filho</option>
-            <option value="2">2 filhos</option>
-            <option value="3">3 filhos</option>
-            <option value="4">4 filhos ou mais</option>
-          </select>
-        </fieldset>
+                <label>
+                  <span>Sobrenome</span>
 
-        <menu>
-          <button type="reset">Limpar</button>
-          <button type="submit">Enviar</button>
-        </menu>
-      </form>
-    </section>
+                  <input type="text" name="person[sobrenome]" maxlength="100" required>
+                </label>
 
-    <?php require_once __DIR__ . '/includes/aside/index.php'; ?>
+                <label>
+                  <span>Idade</span>
+
+                  <input type="number" name="person[idade]" min="0" required>
+                </label>
+
+                <label>
+                  <span>Filhos</span>
+
+                  <select name="person[filhos]" required>
+                    <option value="0" label="Nenhum" selected></option>
+                    <option value="1" label="1 filho"></option>
+                    <option value="2" label="2 filhos"></option>
+                    <option value="3" label="3 filhos"></option>
+                    <option value="4" label="4 filhos ou mais"></option>
+                  </select>
+                </label>
+              </fieldset>
+
+              <menu>
+                <li><button type="reset">Limpar</button></li>
+                <li><button type="submit">Enviar</button></li>
+              </menu>
+            </div>
+          </form>
+
+        </div>
+      </section>
+
+    </div>
   </main>
 
   <?php require_once __DIR__ . '/includes/footer/index.php'; ?>
 
-  <!-- <script type="module" src="../js/pessoas.js" defer></script> -->
+  <?php require_once __DIR__ . '/includes/aside/index.php'; ?>
+
+  <!-- <script type="module" src="../js/pessoas.js"></script> -->
 </body>
 </html>

@@ -5,49 +5,51 @@
 
   <base href="../view/templates/" target="_self">
 
-  <title>Aplicação | Resultados</title>
+  <title>Resultados | App</title>
 </head>
 <body>
   <?php require_once __DIR__ . '/includes/header/index.php'; ?>
 
   <main>
-    <section>
-      <h2>Resultados</h2>
+    <div>
 
-      <output name="result">
-        <table border="1">
-          <caption>
-            <?= $caption ?>
-          </caption>
-          <thead>
-            <tr>
-              <?php
-              foreach ($columns as $column) :
-                echo "<th>$column</th>";
-              endforeach;
-              unset($column);
-              ?>
-            </tr>
-          </thead>
-          <tbody>
-            <?php
-            foreach ($resultSet as $register) :
-              echo "<tr>";
-              foreach ($columns as $column) :
-                echo "<td>$register[$column]</td>";
-              endforeach;
-              echo "</tr>";
-            endforeach;
-            ?>
-          </tbody>
-        </table>
-      </output>
-    </section>
+      <section>
+        <div>
 
-    <?php require_once __DIR__ . '/includes/aside/index.php'; ?>
+          <h2>Resultados</h2>
 
+          <output name="result">
+            <table>
+              <caption>
+                <?= $caption ?>
+              </caption>
+              <thead>
+                <tr>
+                  <?php foreach ( $columns as $column ) : ?>
+                    <th><?= $column ?></th>
+                  <?php endforeach; ?>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ( $resultSet as $register ) : ?>
+                  <tr>
+                    <?php foreach ( $columns as $column ) : ?>
+                      <td><?= $register[$column] ?></td>
+                    <?php endforeach; ?>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+          </output>
+
+        </div>
+      </section>
+
+    </div>
   </main>
 
   <?php require_once __DIR__ . '/includes/footer/index.php'; ?>
+
+  <?php require_once __DIR__ . '/includes/aside/index.php'; ?>
 </body>
 </html>

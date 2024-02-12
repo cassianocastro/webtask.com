@@ -8,44 +8,57 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
 
-  <link rel="modulepreload" href="../js/functions.js">
-  <link rel="modulepreload" href="../js/bairros.js">
+  <!-- <link rel="modulepreload" href="../js/functions.js"> -->
+  <!-- <link rel="modulepreload" href="../js/bairros.js"> -->
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap">
 
-  <title>Aplicação | Bairros</title>
+  <title>Bairros | App</title>
 </head>
 <body>
   <?php require_once __DIR__ . '/includes/header/index.php'; ?>
 
   <main>
-    <section>
-      <h2>Cadastro de Bairros</h2>
+    <div>
 
-      <form id="districtForm" autocomplete="off" spellcheck="true" method="post" action="../../controll/district.php">
-        <fieldset>
-          <legend>Prencha os campos abaixo</legend>
+      <section>
+        <div>
+          <h2>Cadastro de Bairros</h2>
 
-          <label for="fieldDistrictName">Bairro:</label>
-          <label for="fieldCity">Cidade:</label>
+          <form id="df" action="../../controller/DistrictsController.php" method="post" autocomplete="off" spellcheck="true">
+            <div>
+              <fieldset>
+                <legend>Prencha os campos abaixo</legend>
 
-          <input required maxlength="100" type="text" id="fieldDistrictName" name="district[name]">
-          <input required maxlength="100" type="text" id="fieldCity" name="district[cityName]">
-        </fieldset>
+                <label>
+                  <span>Bairro</span>
 
-        <menu>
-          <button type="reset">Limpar</button>
-          <button type="submit">Salvar</button>
-        </menu>
-      </form>
-    </section>
+                  <input type="text" name="district[name]" maxlength="100" required>
+                </label>
 
-    <?php require_once __DIR__ . '/includes/aside/index.php'; ?>
+                <label>
+                  <span>Cidade</span>
 
+                  <input type="text" name="district[cityName]" maxlength="100" required>
+                </label>
+              </fieldset>
+
+              <menu>
+                <li><button type="reset">Limpar</button></li>
+                <li><button type="submit">Salvar</button></li>
+              </menu>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </div>
   </main>
 
   <?php require_once __DIR__ . '/includes/footer/index.php'; ?>
+
+  <?php require_once __DIR__ . '/includes/aside/index.php'; ?>
 
   <!-- <script type="module" src="../js/bairros.js"></script> -->
 </body>

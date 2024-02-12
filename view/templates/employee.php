@@ -14,59 +14,85 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap">
 
-  <title>Aplicação | Funcionários</title>
+  <title>Funcionários | App</title>
 </head>
 
 <body>
   <?php require_once __DIR__ . '/includes/header/index.php'; ?>
 
   <main>
-    <section>
-      <h2>Cadastro de Funcionários</h2>
+    <div>
 
-      <form id="employeeForm" autocomplete="off" spellcheck="true" method="post" action="../../controll/employee.php">
-        <fieldset>
-          <legend>Preencha todos os campos abaixo</legend>
+      <section>
+        <div>
 
-          <div id="labels">
-            <label for="fieldName">Nome Completo:</label>
-            <label for="fieldMatricula">Matrícula:</label>
-            <label for="fieldDate">Data de Admissão:</label>
-            <label for="fieldSalario">Salário:</label>
-            <label for="fieldFilhos">Filhos:</label>
-            <label for="fieldCargo">Cargo:</label>
-          </div>
+          <h2>Cadastro de Funcionários</h2>
 
-          <div id="inputs">
-            <input required maxlength="300" type="text" id="fieldName" name="employee[name]">
-            <input required maxlength="100" type="text" id="fieldMatricula" name="employee[registration]">
-            <input required type="date" id="fieldDate" name="employee[admission]">
-            <input required min="0" type="number" id="fieldSalario" name="employee[wage]">
-            <input required min="0" type="number" id="fieldFilhos" name="employee[sons]">
+          <form id="ef" action="../../controller/EmployeesController.php" method="post" autocomplete="off" spellcheck="true">
+            <div>
+              <fieldset>
+                <legend>Preencha todos os campos abaixo</legend>
 
-            <select required id="fieldCargo" name="employee[office]">
-              <option value="Gerente">Gerente</option>
-              <option value="Encarregado">Encarregado</option>
-              <option value="Operador">Operador</option>
-              <option value="Telefonista">Telefonista</option>
-              <option value="Motorista">Motorista</option>
-            </select>
-          </div>
-        </fieldset>
+                <label>
+                  <span>Nome Completo</span>
 
-        <menu>
-          <button type="reset">Limpar</button>
-          <button type="submit">Salvar</button>
-        </menu>
-      </form>
-    </section>
+                  <input type="text" name="employee[name]" maxlength="300" required>
+                </label>
 
-    <?php require_once __DIR__ . '/includes/aside/index.php'; ?>
+                <label>
+                  <span>Matrícula</span>
 
+                  <input type="text" name="employee[registration]" maxlength="100" required>
+                </label>
+
+                <label>
+                  <span>Data de Admissão</span>
+
+                  <input type="date" name="employee[admission]" required>
+                </label>
+
+                <label>
+                  <span>Salário</span>
+
+                  <input type="number" name="employee[wage]" min="0" required>
+                </label>
+
+                <label>
+                  <span>Filhos</span>
+
+                  <input type="number" name="employee[sons]" min="0" required>
+                </label>
+
+                <label>
+                  <span>Cargo</span>
+
+                  <select name="employee[office]" required>
+                    <option value="Gerente" label="Gerente"></option>
+                    <option value="Encarregado" label="Encarregado"></option>
+                    <option value="Operador" label="Operador"></option>
+                    <option value="Telefonista" label="Telefonista"></option>
+                    <option value="Motorista" label="Motorista"></option>
+                  </select>
+                </label>
+              </fieldset>
+
+              <menu>
+                <li><button type="reset">Limpar</button></li>
+                <li><button type="submit">Salvar</button></li>
+              </menu>
+            </div>
+          </form>
+
+        </div>
+      </section>
+
+    </div>
   </main>
 
   <?php require_once __DIR__ . '/includes/footer/index.php'; ?>
 
-  <!-- <script type="module" src="../js/funcionario.js" defer></script> -->
+  <?php require_once __DIR__ . '/includes/aside/index.php'; ?>
+
+  <!-- <script type="module" src="../js/funcionario.js"></script> -->
 </body>
 </html>
