@@ -1,33 +1,35 @@
-main
+@charset "UTF-8";
+
+body > main
 {
     display: flex;
-    flex-direction: row-reverse;
+    flex-flow: row-reverse nowrap;
 
     height: 450px;
-}
 
-main > div
-{
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
+    & > div
+    {
+        align-items: baseline;
+        display: flex;
+        justify-content: center;
 
-    height: inherit;
-    width: 80%;
+        text-align: center;
 
-    text-align: center;
-}
+        height: 100%;
+        width: 80%;
+    }
 
-main p
-{
-    font-size: x-large;
+    & p
+    {
+        font-size: x-large;
 
-    line-height: 50px;
-}
+        line-height: 50px;
+    }
 
-main h2
-{
-    font-size: xx-large;
-    font-weight: bold;
-    margin-top: 20px;
+    & h2
+    {
+        font: bold xx-large sans-serif;
+
+        margin-top: 20px;
+    }
 }
