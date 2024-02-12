@@ -39,11 +39,10 @@
         </p>
       </section>
     </div>
-
-    <?php require_once __DIR__ . '/includes/aside/index.php'; ?>
-
   </main>
 
   <?php require_once __DIR__ . '/includes/footer/index.php'; ?>
+
+  <?php require_once __DIR__ . '/includes/aside/index.php'; ?>
 </body>
 </html>
