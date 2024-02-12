@@ -20,9 +20,8 @@
   <link rel="stylesheet" href="view/templates/includes/aside/index.css">
   <link rel="stylesheet" href="view/css/main.css">
 
-  <!--
-    <base href="view/html/" target="_blank">
-  -->
+  <!-- <base href="view/templates/" target="_blank"> -->
+
   <title>Aplicação | Home</title>
 </head>
 <body>
