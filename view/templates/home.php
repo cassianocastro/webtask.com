@@ -15,9 +15,10 @@
 
   <link rel="stylesheet" href="view/css/reset.css">
   <link rel="stylesheet" href="view/css/global.css">
-  <link rel="stylesheet" href="view/css/header.css">
+  <link rel="stylesheet" href="view/templates/includes/header/index.css">
+  <link rel="stylesheet" href="view/templates/includes/footer/index.css">
+  <link rel="stylesheet" href="view/templates/includes/aside/index.css">
   <link rel="stylesheet" href="view/css/main.css">
-  <link rel="stylesheet" href="view/css/footer.css">
 
   <!--
     <base href="view/html/" target="_blank">
