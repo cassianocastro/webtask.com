@@ -17,7 +17,7 @@
   <title>Aplicação | Bairros</title>
 </head>
 <body>
-  <?php require_once __DIR__ . '/includes/header.php'; ?>
+  <?php require_once __DIR__ . '/includes/header/index.php'; ?>
 
   <main>
     <section>
@@ -41,11 +41,11 @@
       </form>
     </section>
 
-    <?php require_once __DIR__ . '/includes/aside.php'; ?>
+    <?php require_once __DIR__ . '/includes/aside/index.php'; ?>
 
   </main>
 
-  <?php require_once __DIR__ . '/includes/footer.php'; ?>
+  <?php require_once __DIR__ . '/includes/footer/index.php'; ?>
 
   <!-- <script type="module" src="../js/bairros.js"></script> -->
 </body>
