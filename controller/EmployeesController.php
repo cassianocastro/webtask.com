@@ -34,4 +34,4 @@ $columns = array(
 //"R$ " . number_format($register["wage"], 2, ",", ".")
 echo ( $wasInserted ) ? "Registro inserido." : "Não foi possivel inserir.";
 
-include_once '../view/html/result.php';
+include_once '../view/templates/result.php';

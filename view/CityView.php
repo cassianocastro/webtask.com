@@ -15,6 +15,6 @@ class CityView
         $columns   = $table->getColumns();
         $resultSet = $table->getData();
 
-        require_once 'html/result.php';
+        require_once 'templates/result.php';
     }
 }

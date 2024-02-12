@@ -20,4 +20,4 @@ $columns = array("districtID", "districtName", "cityName");
 
 echo ( $wasInserted ) ? "Registro inserido." : "Não foi possivel inserir.";
 
-include_once '../view/html/result.php';
+include_once '../view/templates/result.php';

@@ -21,4 +21,4 @@ $columns = array(
 
 echo ( $wasInserted ) ? "Registro inserido." : "Não foi possível inserir.";
 
-include_once '../view/html/result.php';
+include_once '../view/templates/result.php';
