@@ -9,7 +9,7 @@ function index()
 {
     const form = document.getElementById("formCity");
 
-    form.onsubmit  = function (e) {
+    form.addEventListener("submit", () => {
         let nome       = document.getElementById("fieldCity");
         let estado     = document.getElementById("fieldState");
         let fieldsOkay = true;
@@ -25,7 +25,7 @@ function index()
         }
 
         return fieldsOkay;
-    }
+    });
 }
 
 index();
