@@ -31,27 +31,16 @@ form.onsubmit  = function (e) {
     let sobrenome  = document.getElementById("fieldLastName");
     let idade      = document.getElementById("fieldAge");
     let filhos     = document.getElementById("fieldSons");
-    let fieldsOkay = true;
 
-    if ( ! isValid(nome) )
+    let fail = ! isValid(nome)
+        || ! isValid(sobrenome)
+        || ! isValid(filhos)
+        || ! valueAgeisValid(idade);
+
+    if ( fail )
     {
-        fieldsOkay = false;
+        return false;
     }
 
-    if ( ! isValid(sobrenome) )
-    {
-        fieldsOkay = false;
-    }
-
-    if ( ! valueAgeisValid(idade) )
-    {
-        fieldsOkay = false;
-    }
-
-    if ( ! isValid(filhos) )
-    {
-        fieldsOkay = false;
-    }
-
-    return fieldsOkay;
+    return true;
 }
