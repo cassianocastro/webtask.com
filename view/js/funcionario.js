@@ -9,7 +9,7 @@ function index()
 {
     const form = document.getElementById("employeeForm");
 
-    form.onsubmit  = function (e) {
+    form.addEventListener("submit", () => {
         let nome       = document.getElementById("fieldName");
         let matricula  = document.getElementById("fieldMatricula");
         let admissao   = document.getElementById("fieldDate");
@@ -49,7 +49,7 @@ function index()
         }
 
         return fieldsOkay;
-    }
+    });
 }
 
 index();
