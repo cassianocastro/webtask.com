@@ -1,0 +1,37 @@
+aside
+{
+    /* background-color: #B7B5B3; */
+
+    height: inherit;
+    width: 20%;
+
+    text-align: center;
+}
+
+aside a
+{
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #B80C09;
+
+    font-size: large;
+    font-weight: bold;
+    color: #E5E7E6;
+
+    display: block;
+
+    text-decoration: none;
+
+    padding: 7px;
+    margin: 5px;
+}
+
+aside a:hover
+{
+    background-color: #141301;
+}
+
+aside a:visited
+{
+    /* color: #141301; */
+}
