@@ -35,25 +35,25 @@
                 <label>
                   <span>Nome</span>
 
-                  <input type="text" name="person[nome]" maxlength="50" required>
+                  <input type="text" name="person[name]" maxlength="50" required>
                 </label>
 
                 <label>
                   <span>Sobrenome</span>
 
-                  <input type="text" name="person[sobrenome]" maxlength="100" required>
+                  <input type="text" name="person[surname]" maxlength="100" required>
                 </label>
 
                 <label>
                   <span>Idade</span>
 
-                  <input type="number" name="person[idade]" min="0" required>
+                  <input type="number" name="person[age]" min="0" required>
                 </label>
 
                 <label>
                   <span>Filhos</span>
 
-                  <select name="person[filhos]" required>
+                  <select name="person[sons]" required>
                     <option value="0" label="Nenhum" selected></option>
                     <option value="1" label="1 filho"></option>
                     <option value="2" label="2 filhos"></option>
