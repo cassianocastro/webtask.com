@@ -24,9 +24,9 @@ function valueAgeisValid(field)
     return true;
 }
 
-let mainForm = document.getElementById("personForm");
+const form = document.getElementById("personForm");
 
-mainForm.onsubmit  = function (e) {
+form.onsubmit  = function (e) {
     let nome       = document.getElementById("fieldName");
     let sobrenome  = document.getElementById("fieldLastName");
     let idade      = document.getElementById("fieldAge");
