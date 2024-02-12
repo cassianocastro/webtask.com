@@ -1,37 +1,37 @@
 aside
 {
-    /* background-color: #B7B5B3; */
+    /* background: #B7B5B3; */
 
     height: inherit;
     width: 20%;
 
     text-align: center;
-}
 
-aside a
-{
-    background: #B80C09;
-    border: thin solid black;
-    border-radius: 3px;
+    & a
+    {
+        background: #B80C09;
+        border: thin solid black;
+        border-radius: 3px;
 
-    color: #E5E7E6;
+        color: #E5E7E6;
 
-    display: block;
+        display: block;
 
-    font: bold large sans-serif;
+        font: bold large sans-serif;
 
-    margin: 5px;
-    padding: 7px;
+        margin: 5px;
+        padding: 7px;
 
-    text-decoration: none;
-}
+        text-decoration: none;
 
-aside a:hover
-{
-    background: #141301;
-}
+        &:hover
+        {
+            background: #141301;
+        }
 
-aside a:visited
-{
-    /* color: #141301; */
+        &:visited
+        {
+            /* color: #141301; */
+        }
+    }
 }
