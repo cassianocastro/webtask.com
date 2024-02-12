@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="application-name" content="MyApp">
   <meta name="description" content="Aplicação de teste">
@@ -29,15 +29,19 @@
 
   <main>
     <div>
-      <section>
-        <h2>Bem-vindo</h2>
 
-        <p>
-          Olá, seja bem-vindo ao sistema de cadastro <br>
-          Nesse sisteva você poderá realizar cadastros diversos. <br>
-          Para isso, utilize o menu ao lado para escolher qual cadastro deseja.
-        </p>
+      <section>
+        <div>
+          <h2>Bem-vindo</h2>
+
+          <p>
+            Olá, seja bem-vindo ao sistema de cadastro <br>
+            Nesse sisteva você poderá realizar cadastros diversos. <br>
+            Para isso, utilize o menu ao lado para escolher qual cadastro deseja.
+          </p>
+        </div>
       </section>
+
     </div>
   </main>
 
