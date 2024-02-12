@@ -10,10 +10,10 @@ function index()
     const form = document.querySelector("#fc");
 
     form.addEventListener("submit", () => {
-        let nome   = document.querySelector("fieldCity");
-        let estado = document.querySelector("fieldState");
+        let name  = document.querySelector("fieldCity");
+        let state = document.querySelector("fieldState");
 
-        if ( ! isValid(nome) || ! isValid(estado) )
+        if ( ! isValid(name) || ! isValid(state) )
         {
             return false;
         }
