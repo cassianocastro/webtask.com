@@ -24,23 +24,32 @@ function valueAgeisValid(field)
     return true;
 }
 
-const form = document.getElementById("personForm");
+/**
+ *
+ */
+function index()
+{
+    const form = document.querySelector("personForm");
 
-form.onsubmit  = function (e) {
-    let nome       = document.getElementById("fieldName");
-    let sobrenome  = document.getElementById("fieldLastName");
-    let idade      = document.getElementById("fieldAge");
-    let filhos     = document.getElementById("fieldSons");
+    form.addEventListener("submit", () => {
+        let name    = form.querySelector("input[name='person\[name\]']");
+        let surname = form.querySelector("input[name='person\[surname\]']");
+        let age     = form.querySelector("input[name='person\[age\]']");
+        let sons    = form.querySelector("input[name='person\[sons\]']");
 
-    let fail = ! isValid(nome)
-        || ! isValid(sobrenome)
-        || ! isValid(filhos)
-        || ! valueAgeisValid(idade);
+        let fail = ! valueAgeisValid(age)
+            || ! isValid(name)
+            || ! isValid(surname)
+            || ! isValid(sons)
+        ;
 
-    if ( fail )
-    {
-        return false;
-    }
+        if ( fail )
+        {
+            return false;
+        }
 
-    return true;
+        return true;
+    });
 }
+
+index();
