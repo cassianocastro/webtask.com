@@ -17,7 +17,7 @@
   <title>Aplicação | Pessoas</title>
 </head>
 <body>
-  <?php require_once __DIR__ . '/templates/header.php'; ?>
+  <?php require_once __DIR__ . '/includes/header.php'; ?>
 
   <main>
     <section>
@@ -54,10 +54,10 @@
       </form>
     </section>
 
-    <?php require_once __DIR__ . '/templates/aside.php'; ?>
+    <?php require_once __DIR__ . '/includes/aside.php'; ?>
   </main>
 
-  <?php require_once __DIR__ . '/templates/footer.php'; ?>
+  <?php require_once __DIR__ . '/includes/footer.php'; ?>
 
   <!-- <script type="module" src="../js/pessoas.js" defer></script> -->
 </body>
