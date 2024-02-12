@@ -1,17 +1,21 @@
-header > div
+body > header
 {
-    background-image: url('https://source.unsplash.com/1600x200');
-    box-shadow: 10px 5px 5px grey;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    & > div
+    {
+        background-image: url('https://source.unsplash.com/1600x200');
+        box-shadow: 10px 5px 5px grey;
 
-    height: 200px;
-}
+        align-items: center;
+        display: flex;
+        justify-content: center;
 
-h1
-{
-    color: #E5E7E6;
-    font-size: 80px;
-    font-weight: bold;
+        height: 200px;
+    }
+
+    & h1
+    {
+        color: #E5E7E6;
+
+        font: bold 80px sans-serif;
+    }
 }
