@@ -16,39 +16,21 @@ function index()
         let salario    = document.getElementById("fieldSalario");
         let filhos     = document.getElementById("fieldFilhos");
         let cargo      = document.getElementById("fieldCargo");
-        let fieldsOkay = true;
 
-        if ( ! isValid(nome) )
+        let fail = ! isValid(nome)
+            || ! isValid(matricula)
+            || ! isValid(admissao)
+            || ! isValid(salario)
+            || ! isValid(filhos)
+            || ! isValid(cargo)
+        ;
+
+        if ( fail )
         {
-            fieldsOkay = false;
+            return false;
         }
 
-        if ( ! isValid(matricula) )
-        {
-            fieldsOkay = false;
-        }
-
-        if ( ! isValid(admissao) )
-        {
-            fieldsOkay = false;
-        }
-
-        if ( ! isValid(salario) )
-        {
-            fieldsOkay = false;
-        }
-
-        if ( ! isValid(filhos) )
-        {
-            fieldsOkay = false;
-        }
-
-        if ( ! isValid(cargo) )
-        {
-            fieldsOkay = false;
-        }
-
-        return fieldsOkay;
+        return true;
     });
 }
 
