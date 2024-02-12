@@ -8,7 +8,7 @@
   <title>Aplicação | Resultados</title>
 </head>
 <body>
-  <?php include_once 'templates/header.php'; ?>
+  <?php require_once __DIR__ . '/templates/header.php'; ?>
 
   <main>
     <section>
@@ -44,10 +44,10 @@
       </output>
     </section>
 
-    <?php include_once 'templates/aside.php'; ?>
+    <?php require_once __DIR__ . '/templates/aside.php'; ?>
 
   </main>
 
-  <?php include_once 'templates/footer.php'; ?>
+  <?php require_once __DIR__ . '/templates/footer.php'; ?>
 </body>
 </html>
