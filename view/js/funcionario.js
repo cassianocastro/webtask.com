@@ -10,12 +10,12 @@ function index()
     const form = document.querySelector("employeeForm");
 
     form.addEventListener("submit", () => {
-        let nome      = form.querySelector("fieldName");
-        let matricula = form.querySelector("fieldMatricula");
-        let admissao  = form.querySelector("fieldDate");
-        let salario   = form.querySelector("fieldSalario");
-        let filhos    = form.querySelector("fieldFilhos");
-        let cargo     = form.querySelector("fieldCargo");
+        let nome      = form.querySelector("input[name=employee\[name\]]");
+        let matricula = form.querySelector("input[name=employee\[registration\]]");
+        let admissao  = form.querySelector("input[name=employee\[admission\]]");
+        let salario   = form.querySelector("input[name=employee\[wage\]]");
+        let filhos    = form.querySelector("input[name=employee\[sons\]]");
+        let cargo     = form.querySelector("input[name=employee\[office\]]");
 
         let fail = ! isValid(nome)
             || ! isValid(matricula)
