@@ -1,21 +1,25 @@
+"use strict";
+
 import { valueFieldIsValid as isValid } from "./functions.js";
 
-let mainForm = document.getElementById("districtForm");
+/**
+ *
+ */
+function index()
+{
+    const form = document.querySelector("#df");
 
-mainForm.onsubmit  = function (e) {
-    let nome       = document.getElementById("fieldDistrictName");
-    let cidade     = document.getElementById("fieldCity");
-    let fieldsOkay = true;
+    form.addEventListener("submit", () => {
+        let name = document.querySelector("input[name='district\[name\]']");
+        let city = document.querySelector("input[name='district\[cityName\]']");
 
-    if ( ! isValid(nome) )
-    {
-        fieldsOkay = false;
-    }
+        if ( ! isValid(name) || ! isValid(city) )
+        {
+            return false;
+        }
 
-    if ( ! isValid(cidade) )
-    {
-        fieldsOkay = false;
-    }
+        return true;
+    });
+}
 
-    return fieldsOkay;
-};
+index();
