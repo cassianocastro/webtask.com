@@ -10,15 +10,15 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap">
 
-  <link rel="stylesheet" href="view/css/reset.css">
-  <link rel="stylesheet" href="view/css/global.css">
-  <link rel="stylesheet" href="view/templates/includes/header/index.css">
-  <link rel="stylesheet" href="view/templates/includes/footer/index.css">
-  <link rel="stylesheet" href="view/templates/includes/aside/index.css">
-  <link rel="stylesheet" href="view/css/main.css">
+  <link rel="stylesheet" type="text/css" href="view/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="view/css/global.css">
+  <link rel="stylesheet" type="text/css" href="view/css/main.css">
+  <link rel="stylesheet" type="text/css" href="view/templates/includes/header/index.css">
+  <link rel="stylesheet" type="text/css" href="view/templates/includes/footer/index.css">
+  <link rel="stylesheet" type="text/css" href="view/templates/includes/aside/index.css">
 
   <!-- <base href="view/templates/" target="_blank"> -->
 
