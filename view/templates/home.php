@@ -22,7 +22,7 @@
 
   <!-- <base href="view/templates/" target="_blank"> -->
 
-  <title>Aplicação | Home</title>
+  <title>Home | App</title>
 </head>
 <body>
   <?php require_once __DIR__ . '/includes/header/index.php'; ?>
