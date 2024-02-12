@@ -7,15 +7,15 @@ import { valueFieldIsValid as isValid } from "./functions.js";
  */
 function index()
 {
-    const form = document.getElementById("employeeForm");
+    const form = document.querySelector("employeeForm");
 
     form.addEventListener("submit", () => {
-        let nome       = document.getElementById("fieldName");
-        let matricula  = document.getElementById("fieldMatricula");
-        let admissao   = document.getElementById("fieldDate");
-        let salario    = document.getElementById("fieldSalario");
-        let filhos     = document.getElementById("fieldFilhos");
-        let cargo      = document.getElementById("fieldCargo");
+        let nome      = form.querySelector("fieldName");
+        let matricula = form.querySelector("fieldMatricula");
+        let admissao  = form.querySelector("fieldDate");
+        let salario   = form.querySelector("fieldSalario");
+        let filhos    = form.querySelector("fieldFilhos");
+        let cargo     = form.querySelector("fieldCargo");
 
         let fail = ! isValid(nome)
             || ! isValid(matricula)
