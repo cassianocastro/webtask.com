@@ -10,25 +10,25 @@ aside
 
 aside a
 {
-    border: 1px solid black;
+    background: #B80C09;
+    border: thin solid black;
     border-radius: 3px;
-    background-color: #B80C09;
 
-    font-size: large;
-    font-weight: bold;
     color: #E5E7E6;
 
     display: block;
 
-    text-decoration: none;
+    font: bold large sans-serif;
 
-    padding: 7px;
     margin: 5px;
+    padding: 7px;
+
+    text-decoration: none;
 }
 
 aside a:hover
 {
-    background-color: #141301;
+    background: #141301;
 }
 
 aside a:visited
