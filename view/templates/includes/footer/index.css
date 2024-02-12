@@ -1,13 +1,15 @@
-footer
+body > footer
 {
     & > div
     {
-        background-color: #141301;
-        color: #E3DCE6;
-        height: 10vh;
+        background: #141301;
 
+        color: #E3DCE6;
+
+        align-items: center;
         display: flex;
         justify-content: center;
-        align-items: center;
+
+        height: 10vh;
     }
 }
