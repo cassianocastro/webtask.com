@@ -2,12 +2,14 @@
 
 body > aside
 {
-    /* background: #B7B5B3; */
+    & > div
+    {
+        background: #B7B5B3;
 
-    height: inherit;
-    width: 20%;
+        height: 100%;
 
-    text-align: center;
+        text-align: center;
+    }
 
     & a
     {
