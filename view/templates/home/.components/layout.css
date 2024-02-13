@@ -1,12 +1,35 @@
 @charset "UTF-8";
 
+body
+{
+    display: grid;
+    grid: 10vh 80vh 10vh / 20% 80%;
+
+    height: 100%;
+
+    & > header
+    {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    & > main
+    {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    & > footer
+    {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+
+    & > aside
+    {
+        grid-area: 1 / 1 / 4 / 2;
+    }
+}
+
 body > main
 {
-    display: flex;
-    flex-flow: row-reverse nowrap;
-
-    height: 450px;
-
     & > div
     {
         align-items: baseline;
@@ -19,17 +42,17 @@ body > main
         width: 80%;
     }
 
-    & p
-    {
-        font-size: x-large;
-
-        line-height: 50px;
-    }
-
     & h2
     {
         font: bold xx-large sans-serif;
 
         margin-top: 20px;
+    }
+
+    & p
+    {
+        font-size: x-large;
+
+        line-height: 50px;
     }
 }
