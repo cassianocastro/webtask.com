@@ -34,18 +34,4 @@ body > main
     {
         height: 100%;
     }
-
-    & h2
-    {
-        font: bold xx-large sans-serif;
-
-        margin-top: 20px;
-    }
-
-    & p
-    {
-        font-size: x-large;
-
-        line-height: 50px;
-    }
 }
