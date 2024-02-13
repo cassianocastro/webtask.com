@@ -9,12 +9,6 @@
           <legend>Preencha os campos com seu endereço</legend>
 
           <label>
-            <span>Cidade</span>
-
-            <input type="text" name="city[name]" maxlength="100" required>
-          </label>
-
-          <label for="fieldState">
             <span>Estado</span>
 
             <select name="city[state]" required>
@@ -60,6 +54,24 @@
                 <option value="PR">Paraná</option>
               </optgroup>
             </select>
+          </label>
+
+          <label>
+            <span>Cidade</span>
+
+            <input type="text" name="city[name]" maxlength="100" required>
+          </label>
+
+          <label>
+            <span>Bairro</span>
+
+            <input type="text" name="district[name]" maxlength="100" required>
+          </label>
+
+          <label>
+            <span>Rua</span>
+
+            <input type="text" name="district[cityName]" maxlength="100" required>
           </label>
         </fieldset>
 
