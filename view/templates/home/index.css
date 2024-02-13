@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+@import "../../css/reset.css";
+@import "../../css/global.css";
+
+@import "../includes/header/index.css";
+@import "../includes/footer/index.css";
+@import "../includes/aside/index.css";
+
+@import "./.components/layout.css";
