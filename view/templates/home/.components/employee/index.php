@@ -1,7 +1,11 @@
 <section>
   <div>
 
-    <h2>Cadastro de Funcionários</h2>
+    <header>
+      <div>
+        <h2>Cadastro de Funcionários</h2>
+      </div>
+    </header>
 
     <form id="ef" action="../../controller/EmployeesController.php" method="post" autocomplete="off" spellcheck="true">
       <div>
