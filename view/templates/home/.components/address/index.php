@@ -1,7 +1,7 @@
 <section>
   <div>
 
-    <h2>Cadastro de Cidades</h2>
+    <h2>Cadastro de Endereço</h2>
 
     <form id="fc" autocomplete="off" spellcheck="true" method="post" action="../../index.php">
       <div>
