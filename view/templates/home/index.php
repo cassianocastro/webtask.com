@@ -12,14 +12,14 @@
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap">
-  <link rel="stylesheet" type="text/css" href="./index.css">
+  <link rel="stylesheet" type="text/css" href="view/templates/home/index.css">
 
   <!-- <base href="view/templates/" target="_blank"> -->
 
   <title>Home | App</title>
 </head>
 <body>
-  <?php require_once __DIR__ . '/includes/header/index.php'; ?>
+  <?php require_once __DIR__ . '/../includes/header/index.php'; ?>
 
   <main>
     <div>
@@ -39,8 +39,8 @@
     </div>
   </main>
 
-  <?php require_once __DIR__ . '/includes/footer/index.php'; ?>
+  <?php require_once __DIR__ . '/../includes/footer/index.php'; ?>
 
-  <?php require_once __DIR__ . '/includes/aside/index.php'; ?>
+  <?php require_once __DIR__ . '/../includes/aside/index.php'; ?>
 </body>
 </html>
