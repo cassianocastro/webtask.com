@@ -24,23 +24,7 @@
   <main>
     <div>
 
-      <!--
-      <section>
-        <div>
-          <h2>Bem-vindo</h2>
-
-          <p>
-            Olá, seja bem-vindo ao sistema de cadastro <br>
-            Nesse sisteva você poderá realizar cadastros diversos. <br>
-            Para isso, utilize o menu ao lado para escolher qual cadastro deseja.
-          </p>
-        </div>
-      </section>
-      -->
-
       <?php require_once __DIR__ . '/.components/employee/index.php'; ?>
-
-      <?php require_once __DIR__ . '/.components/address/index.php'; ?>
 
     </div>
   </main>
@@ -48,5 +32,7 @@
   <?php require_once __DIR__ . '/../includes/footer/index.php'; ?>
 
   <?php require_once __DIR__ . '/../includes/aside/index.php'; ?>
+
+  <!-- <script type="module" src="./index.js"></script> -->
 </body>
 </html>
