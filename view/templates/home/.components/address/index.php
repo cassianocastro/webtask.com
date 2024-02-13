@@ -73,6 +73,18 @@
 
             <input type="text" name="district[cityName]" maxlength="100" required>
           </label>
+
+          <label>
+            <span>Número</span>
+
+            <input type="text" name="district[cityName]" maxlength="100" required>
+          </label>
+
+          <label>
+            <span>Complemento</span>
+
+            <textarea name="" required></textarea>
+          </label>
         </fieldset>
 
         <menu>
