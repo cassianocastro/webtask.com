@@ -37,6 +37,8 @@
               <option value="4" label="4 filhos ou mais"></option>
             </select>
           </label>
+
+          <?php require_once __DIR__ . '/../address/index.php'; ?>
         </fieldset>
 
         <fieldset>
@@ -82,5 +84,3 @@
 
   </div>
 </section>
-
-<script type="module" src="./index.js"></script>
