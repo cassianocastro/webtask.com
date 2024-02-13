@@ -4,8 +4,8 @@ body > header
 {
     & > div
     {
-        background: #B80C09;
-        box-shadow: 0 0 5px #141301;
+        background: var(--bg_primary);
+        box-shadow: 0 0 5px var(--bg_secondary);
 
         align-items: center;
         display: flex;
@@ -16,7 +16,7 @@ body > header
 
     & h1
     {
-        color: #E5E7E6;
+        color: var(--fg_primary);
 
         font: bold 1.5rem sans-serif;
     }

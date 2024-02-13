@@ -4,7 +4,7 @@ body > aside
 {
     & > div
     {
-        background: #B7B5B3;
+        background: var(--bg_ternary);
 
         height: 100%;
 
@@ -13,11 +13,11 @@ body > aside
 
     & a
     {
-        background: #B80C09;
+        background: var(--bg_primary);
         border: thin solid black;
         border-radius: 3px;
 
-        color: #E5E7E6;
+        color: var(--fg_primary);
 
         display: block;
 
@@ -30,7 +30,7 @@ body > aside
 
         &:hover
         {
-            background: #141301;
+            background: var(--bg_secondary);
         }
 
         &:visited

@@ -4,9 +4,9 @@ body > footer
 {
     & > div
     {
-        background: #141301;
+        background: var(--bg_secondary);
 
-        color: #E3DCE6;
+        color: var(--fg_primary);
 
         align-items: center;
         display: flex;
