@@ -3,6 +3,11 @@
 html
 {
     scroll-behavior: smooth;
+
+    --bg_primary   : #B80C09;
+    --bg_secondary : #141301;
+    --bg_ternary   : #B7B5B3;
+    --fg_primary   : #E5E7E6;
 }
 
 body
