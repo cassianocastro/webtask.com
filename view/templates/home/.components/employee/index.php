@@ -1,98 +1,64 @@
-<!DOCTYPE html>
-<html lang="pt-BR" dir="ltr">
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aplicação de teste">
+<section>
+  <div>
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+    <h2>Cadastro de Funcionários</h2>
 
-  <!-- <link rel="modulepreload" href="../js/functions.js"> -->
-  <link rel="modulepreload" href="./index.js">
+    <form id="ef" action="../../controller/EmployeesController.php" method="post" autocomplete="off" spellcheck="true">
+      <div>
+        <fieldset>
+          <legend>Preencha todos os campos abaixo</legend>
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap">
+          <label>
+            <span>Nome Completo</span>
 
-  <title>Funcionários | App</title>
-</head>
+            <input type="text" name="employee[name]" maxlength="300" required>
+          </label>
 
-<body>
-  <?php require_once __DIR__ . '/includes/header/index.php'; ?>
+          <label>
+            <span>Matrícula</span>
 
-  <main>
-    <div>
+            <input type="text" name="employee[registration]" maxlength="100" required>
+          </label>
 
-      <section>
-        <div>
+          <label>
+            <span>Data de Admissão</span>
 
-          <h2>Cadastro de Funcionários</h2>
+            <input type="date" name="employee[admission]" required>
+          </label>
 
-          <form id="ef" action="../../controller/EmployeesController.php" method="post" autocomplete="off" spellcheck="true">
-            <div>
-              <fieldset>
-                <legend>Preencha todos os campos abaixo</legend>
+          <label>
+            <span>Salário</span>
 
-                <label>
-                  <span>Nome Completo</span>
+            <input type="number" name="employee[wage]" min="0" required>
+          </label>
 
-                  <input type="text" name="employee[name]" maxlength="300" required>
-                </label>
+          <label>
+            <span>Filhos</span>
 
-                <label>
-                  <span>Matrícula</span>
+            <input type="number" name="employee[sons]" min="0" required>
+          </label>
 
-                  <input type="text" name="employee[registration]" maxlength="100" required>
-                </label>
+          <label>
+            <span>Cargo</span>
 
-                <label>
-                  <span>Data de Admissão</span>
+            <select name="employee[office]" required>
+              <option value="Gerente" label="Gerente"></option>
+              <option value="Encarregado" label="Encarregado"></option>
+              <option value="Operador" label="Operador"></option>
+              <option value="Telefonista" label="Telefonista"></option>
+              <option value="Motorista" label="Motorista"></option>
+            </select>
+          </label>
+        </fieldset>
 
-                  <input type="date" name="employee[admission]" required>
-                </label>
+        <menu>
+          <li><button type="reset">Limpar</button></li>
+          <li><button type="submit">Salvar</button></li>
+        </menu>
+      </div>
+    </form>
 
-                <label>
-                  <span>Salário</span>
+  </div>
+</section>
 
-                  <input type="number" name="employee[wage]" min="0" required>
-                </label>
-
-                <label>
-                  <span>Filhos</span>
-
-                  <input type="number" name="employee[sons]" min="0" required>
-                </label>
-
-                <label>
-                  <span>Cargo</span>
-
-                  <select name="employee[office]" required>
-                    <option value="Gerente" label="Gerente"></option>
-                    <option value="Encarregado" label="Encarregado"></option>
-                    <option value="Operador" label="Operador"></option>
-                    <option value="Telefonista" label="Telefonista"></option>
-                    <option value="Motorista" label="Motorista"></option>
-                  </select>
-                </label>
-              </fieldset>
-
-              <menu>
-                <li><button type="reset">Limpar</button></li>
-                <li><button type="submit">Salvar</button></li>
-              </menu>
-            </div>
-          </form>
-
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <?php require_once __DIR__ . '/includes/footer/index.php'; ?>
-
-  <?php require_once __DIR__ . '/includes/aside/index.php'; ?>
-
-  <script type="module" src="./index.js"></script>
-</body>
-</html>
+<script type="module" src="./index.js"></script>
