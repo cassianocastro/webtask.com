@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
 
   <!-- <link rel="modulepreload" href="../js/functions.js"> -->
-  <!-- <link rel="modulepreload" href="../js/bairros.js"> -->
+  <link rel="modulepreload" href="./index.js">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap">
@@ -60,6 +60,6 @@
 
   <?php require_once __DIR__ . '/includes/aside/index.php'; ?>
 
-  <!-- <script type="module" src="../js/bairros.js"></script> -->
+  <script type="module" src="./index.js"></script>
 </body>
 </html>
