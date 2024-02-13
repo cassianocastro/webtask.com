@@ -11,25 +11,25 @@
           <label>
             <span>Nome</span>
 
-            <input type="text" name="person[name]" maxlength="50" required>
+            <input type="text" name="" maxlength="50" required>
           </label>
 
           <label>
             <span>Sobrenome</span>
 
-            <input type="text" name="person[surname]" maxlength="100" required>
+            <input type="text" name="" maxlength="100" required>
           </label>
 
           <label>
             <span>Idade</span>
 
-            <input type="number" name="person[age]" min="0" required>
+            <input type="number" name="" min="0" required>
           </label>
 
           <label>
             <span>Filhos</span>
 
-            <select name="person[sons]" required>
+            <select name="" required>
               <option value="0" label="Nenhum" selected></option>
               <option value="1" label="1 filho"></option>
               <option value="2" label="2 filhos"></option>
@@ -47,25 +47,25 @@
           <label>
             <span>Matrícula</span>
 
-            <input type="text" name="employee[registration]" maxlength="100" required>
+            <input type="text" name="" maxlength="100" required>
           </label>
 
           <label>
             <span>Data de Admissão</span>
 
-            <input type="date" name="employee[admission]" required>
+            <input type="date" name="" required>
           </label>
 
           <label>
             <span>Salário</span>
 
-            <input type="number" name="employee[wage]" min="0" required>
+            <input type="number" name="" min="0" required>
           </label>
 
           <label>
             <span>Cargo</span>
 
-            <select name="employee[office]" required>
+            <select name="" required>
               <option value="Gerente" label="Gerente"></option>
               <option value="Encarregado" label="Encarregado"></option>
               <option value="Operador" label="Operador"></option>
