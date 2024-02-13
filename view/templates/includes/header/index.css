@@ -5,11 +5,13 @@ body > header
     & > div
     {
         background: var(--bg_primary);
-        box-shadow: 0 0 5px var(--bg_secondary);
+        box-shadow: 0 0 10px var(--bg_secondary);
 
         align-items: center;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
+
+        padding: 10px 20px;
 
         height: 100%;
     }
@@ -18,6 +20,6 @@ body > header
     {
         color: var(--fg_primary);
 
-        font: bold 1.5rem sans-serif;
+        font: bold 1.15rem sans-serif;
     }
 }
