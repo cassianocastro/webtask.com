@@ -62,6 +62,12 @@
   </label>
 
   <label>
+    <span>CEP</span>
+
+    <input type="text" name="" maxlength="100" required>
+  </label>
+
+  <label>
     <span>Rua</span>
 
     <input type="text" name="" maxlength="100" required>
