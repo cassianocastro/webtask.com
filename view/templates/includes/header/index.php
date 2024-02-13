@@ -1,5 +1,5 @@
 <header>
   <div>
-    <h1>Aplicação</h1>
+    <h1>Application</h1>
   </div>
 </header>
