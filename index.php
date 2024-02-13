@@ -14,7 +14,7 @@ function index(): void
 
     // (new controller\CitiesController())->addCity($city);
 
-    require_once __DIR__ . '/view/templates/home.php';
+    require_once __DIR__ . '/view/templates/home/index.php';
 }
 
 index();
