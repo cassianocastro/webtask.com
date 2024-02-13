@@ -1,16 +1,20 @@
 <aside>
   <div>
     <header>
-      <h2>Menu</h2>
+      <div>
+        <h2>Application</h2>
+      </div>
     </header>
 
     <nav>
-      <ul>
-        <li><a href="people.php">Pessoas</a></li>
-        <li><a href="employee.php">Funcionários</a></li>
-        <li><a href="city.php">Cidades</a></li>
-        <li><a href="district.php">Bairros</a></li>
-      </ul>
+      <div>
+        <ul>
+          <li><a href="people.php">Pessoas</a></li>
+          <li><a href="employee.php">Funcionários</a></li>
+          <li><a href="city.php">Cidades</a></li>
+          <li><a href="district.php">Bairros</a></li>
+        </ul>
+      </div>
     </nav>
   </div>
 </aside>
