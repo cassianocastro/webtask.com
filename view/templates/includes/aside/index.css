@@ -4,38 +4,71 @@ body > aside
 {
     & > div
     {
-        background: var(--bg_ternary);
-
-        height: 100%;
-
-        text-align: center;
-    }
-
-    & a
-    {
-        background: var(--bg_primary);
-        border: thin solid black;
-        border-radius: 3px;
+        background: var(--bg_secondary);
 
         color: var(--fg_primary);
 
-        display: block;
+        padding: 20px;
 
-        font: bold large sans-serif;
+        height: 100%;
+    }
 
-        margin: 5px;
-        padding: 7px;
+    & > div > header
+    {
+        height: 10%;
 
-        text-decoration: none;
-
-        &:hover
+        & > :only-child
         {
-            background: var(--bg_secondary);
+            height: 100%;
         }
 
-        &:visited
+        & h2
         {
-            /* color: #141301; */
+            font: bold 1.3rem "Staatliches", sans-serif;
+
+            text-align: center;
+        }
+    }
+
+    & > div > nav
+    {
+        height: 90%;
+
+        & > :only-child
+        {
+            height: 100%;
+        }
+
+        & ul
+        {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 15px;
+        }
+
+        & a
+        {
+            background: transparent;
+            border: thin solid var(--bg_primary);
+            border-radius: 5px 20px 20px 5px;
+
+            color: inherit;
+
+            display: block;
+
+            font: bold .95rem "Staatliches", sans-serif;
+
+            padding: 10px 0;
+
+            text-align: center;
+            text-decoration: none;
+
+            transition: all .5s ease-in-out;
+
+            &:hover
+            {
+                background: var(--bg_primary);
+            }
         }
     }
 }
