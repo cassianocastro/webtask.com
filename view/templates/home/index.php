@@ -24,6 +24,7 @@
   <main>
     <div>
 
+      <!--
       <section>
         <div>
           <h2>Bem-vindo</h2>
@@ -35,6 +36,13 @@
           </p>
         </div>
       </section>
+      -->
+
+      <?php require_once __DIR__ . '/.components/employee/index.php'; ?>
+
+      <?php require_once __DIR__ . '/.components/people/index.php'; ?>
+
+      <?php require_once __DIR__ . '/.components/address/index.php'; ?>
 
     </div>
   </main>
