@@ -4,7 +4,7 @@
   <label>
     <span>Estado</span>
 
-    <select name="city[state]" required>
+    <select name="" required>
       <optgroup label="Região Norte">
         <option value="AP">Amapá</option>
         <option value="AM">Amazonas</option>
@@ -52,25 +52,25 @@
   <label>
     <span>Cidade</span>
 
-    <input type="text" name="city[name]" maxlength="100" required>
+    <input type="text" name="" maxlength="100" required>
   </label>
 
   <label>
     <span>Bairro</span>
 
-    <input type="text" name="district[name]" maxlength="100" required>
+    <input type="text" name="" maxlength="100" required>
   </label>
 
   <label>
     <span>Rua</span>
 
-    <input type="text" name="district[cityName]" maxlength="100" required>
+    <input type="text" name="" maxlength="100" required>
   </label>
 
   <label>
     <span>Número</span>
 
-    <input type="text" name="district[cityName]" maxlength="100" required>
+    <input type="text" name="" maxlength="100" required>
   </label>
 
   <label>
