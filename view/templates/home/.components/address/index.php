@@ -80,7 +80,20 @@
   </label>
 
   <menu>
-    <li><button type="button">Limpar</button></li>
-    <li><button type="button">Salvar</button></li>
+    <li>
+      <label>
+        <button type="button" title="Limpar todos os campos">Limpar</button>
+
+        <span>campos</span>
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <button type="button" title="Salvar dados de endereço">Salvar</button>
+
+        <span>endereço</span>
+      </label>
+    </li>
   </menu>
 </fieldset>
