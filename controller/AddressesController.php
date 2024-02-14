@@ -34,7 +34,7 @@ final class AddressesController
         // $resultSet   = $districtDAO->getAll();
 
         $caption = "Bairros cadastrados";
-        $columns = array("districtID", "districtName", "cityName");
+        $columns = [ "districtID", "districtName", "cityName" ];
 
         // echo ( $wasInserted ) ? "Registro inserido." : "Não foi possivel inserir.";
 

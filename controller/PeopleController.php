@@ -19,13 +19,13 @@ final class PeopleController
         $resultSet   = $personDAO->getAll();
 
         $caption = "People";
-        $columns = array(
+        $columns = [
             "personID",
             "firstName",
             "lastName",
             "age",
             "childs"
-        );
+        ];
 
         echo ( $wasInserted ) ? "Registro inserido." : "Não foi possível inserir.";
 

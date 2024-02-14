@@ -21,7 +21,7 @@ final class EmployeesController
         $resultSet        = $employeeDAO->getAll();
 
         $caption = "Funcionários cadastrados";
-        $columns = array(
+        $columns = [
             "employeeID",
             "completeName",
             "registration",
@@ -29,7 +29,7 @@ final class EmployeesController
             "wage",
             "childs",
             "office"
-        );
+        ];
 
         //"R$ " . number_format($register["wage"], 2, ",", ".")
         echo ( $wasInserted ) ? "Registro inserido." : "Não foi possivel inserir.";
