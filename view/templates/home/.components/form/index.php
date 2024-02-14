@@ -7,13 +7,13 @@
       </div>
     </header>
 
-    <form id="ef" action="../../controller/EmployeesController.php" method="post" autocomplete="off" spellcheck="true">
+    <form id="ef" action="./" method="post" autocomplete="off" spellcheck="true">
       <div>
-        <?php require_once __DIR__ . '/.components/personal/index.php'; ?>
+        <?php require_once __DIR__ . '/.components/employee/index.php'; ?>
 
         <?php require_once __DIR__ . '/.components/address/index.php'; ?>
 
-        <?php require_once __DIR__ . '/.components/employee/index.php'; ?>
+        <?php require_once __DIR__ . '/.components/personal/index.php'; ?>
       </div>
     </form>
 
