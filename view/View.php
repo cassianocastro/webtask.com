@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace view;
 
 use model\Table;
@@ -6,10 +8,10 @@ use model\Table;
 /**
  *
  */
-class CityView
+final class View
 {
 
-    public function render(Table $table)
+    public function render(Table $table): void
     {
         $caption   = $table->getCaption();
         $columns   = $table->getColumns();
