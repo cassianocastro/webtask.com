@@ -6,70 +6,48 @@ body > aside
     {
         background: var(--bg_secondary);
 
-        color: var(--fg_primary);
-
         padding: 20px;
 
         height: 100%;
     }
 
-    & > div > header
+    & > div > menu
     {
-        height: 10%;
+        align-items: center;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        gap: 15px;
 
-        & > :only-child
+        height: inherit;
+
+        & button
         {
-            height: 100%;
-        }
+            background: var(--bg_primary);
+            border: none;
 
-        & h2
-        {
-            font: bold 1.3rem "Staatliches", sans-serif;
-
-            text-align: center;
-        }
-    }
-
-    & > div > nav
-    {
-        height: 90%;
-
-        & > :only-child
-        {
-            height: 100%;
-        }
-
-        & ul
-        {
+            align-items: center;
             display: flex;
-            flex-flow: column nowrap;
-            gap: 15px;
+            justify-content: center;
         }
 
-        & a
+        & > :first-child > button
         {
-            background: transparent;
-            border: thin solid var(--fg_primary);
-            border-radius: 5px 20px 20px 5px;
+            border-radius: 50%;
 
-            color: inherit;
-
-            display: block;
-
-            font: bold .85rem sans-serif;
-
-            padding: 10px 0;
-
-            text-align: center;
-            text-decoration: none;
-
-            transition: all .5s linear;
+            padding: 5px;
 
             &:hover
             {
-                background: var(--bg_primary);
-                border-color: var(--bg_primary);
+                animation: spiral 1s linear infinite;
             }
+        }
+
+        & > :last-child > button
+        {
+            border-radius: 5px;
+
+            padding: 7px;
         }
     }
 }
