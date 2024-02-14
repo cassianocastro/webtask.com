@@ -36,6 +36,8 @@ section:last-of-type
 
             & > :only-child
             {
+                direction: rtl;
+
                 overflow: hidden scroll;
                 padding: 10px 20px;
 
@@ -44,6 +46,8 @@ section:last-of-type
 
             & ul
             {
+                direction: ltr;
+
                 display: flex;
                 flex-flow: column nowrap;
                 gap: 10px;
