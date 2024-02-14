@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+@keyframes spiral
+{
+    from
+    {
+        transform: rotateZ(0deg);
+    }
+
+    to
+    {
+        transform: rotateZ(360deg);
+    }
+}
+
+.item
+{
+    box-shadow: 0 0 7px 1px var(--bg_secondary);
+    border-radius: 7px;
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 5px 15px;
+
+    & > figure
+    {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+
+        & > figcaption
+        {
+            font: normal .9rem "Ubuntu", sans-serif;
+        }
+    }
+
+    & > button
+    {
+        background: var(--bg_primary);
+        border: none;
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        outline: none;
+        padding: 5px;
+
+        &:hover > img
+        {
+            animation: spiral 1s linear infinite;
+        }
+    }
+}
