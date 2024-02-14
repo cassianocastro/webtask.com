@@ -9,10 +9,10 @@ use view\CityView;
 /**
  *
  */
-class CitiesController
+class AddressesController
 {
 
-    public function addCity(array $city): void
+    public function addAddress(array $city): void
     {
         $config     = new DataBaseConfig("localhost", "mysql", "webTask", "php", "php", 3306);
         $connection = (new DataBaseConnection($config))->getConnection();
@@ -26,7 +26,7 @@ class CitiesController
         }
     }
 
-    public function showCities(): void
+    public function showAddresses(): void
     {
         $config     = new DataBaseConfig("localhost", "mysql", "webTask", "php", "php", 3306);
         $connection = (new DataBaseConnection($config))->getConnection();
