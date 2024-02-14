@@ -32,6 +32,6 @@
 
   <?php require_once __DIR__ . '/../includes/aside/index.php'; ?>
 
-  <!-- <script type="module" src="./index.js"></script> -->
+  <script defer type="module" src="view/templates/home/index.js"></script>
 </body>
 </html>
