@@ -4,7 +4,7 @@ namespace model;
 /**
  *
  */
-class CityDAO implements IDAO
+class AddressRepository
 {
 
     private $connection;
