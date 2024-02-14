@@ -11,9 +11,9 @@ use PDO, PDOException;
 final class ConnectionFactory
 {
 
-    private DataBaseConfig $config;
+    private DBConfig $config;
 
-    public function __construct(DataBaseConfig $config)
+    public function __construct(DBConfig $config)
     {
         $this->config = $config;
     }
@@ -23,10 +23,10 @@ final class ConnectionFactory
         try
         {
             return new PDO(
-                $this->config->getDataBank()   . ":host="  .
+                $this->config->getDriver() . ":host=" .
                 $this->config->getHost() . ";" . "dbname=" .
-                $this->config->getDataBase(),
-                $this->config->getUserName(),
+                $this->config->getDatabase(),
+                $this->config->getUsername(),
                 $this->config->getPassword(),
             );
         }
