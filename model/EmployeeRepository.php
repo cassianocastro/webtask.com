@@ -4,7 +4,7 @@ namespace model;
 /**
  *
  */
-class EmployeeDAO implements IDAO
+class EmployeeRepository implements IDAO
 {
 
     private $connection;
