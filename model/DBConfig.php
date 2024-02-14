@@ -4,7 +4,7 @@ namespace model;
 /**
  *
  */
-final class DataBaseConfig
+final class DBConfig
 {
 
     private string $host;
