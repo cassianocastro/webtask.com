@@ -18,8 +18,13 @@ body > header
 
     & h1
     {
+        background: var(--bg_secondary);
+        border-radius: 20px 7px 7px 20px;
+
         color: var(--fg_primary);
 
-        font: bold 1.15rem sans-serif;
+        font: bold 1rem "Ubuntu", sans-serif;
+
+        padding: 7px 20px;
     }
 }
