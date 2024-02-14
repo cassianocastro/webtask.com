@@ -15,18 +15,21 @@ form fieldset:nth-of-type(3)
         & > :first-child
         {
             align-self: center;
+
+            font-size: .9rem;
         }
 
         & > :last-child
         {
             background: none;
-            border: none;
+            border: 2px solid var(--bg_primary);
             border-radius: 5px;
+            box-shadow: 0 0 7px var(--bg_primary);
 
             caret-color: var(--bg_primary);
             color: var(--bg_secondary);
 
-            outline: thin solid var(--bg_primary);
+            outline: none;
             padding: 7px 10px;
         }
     }

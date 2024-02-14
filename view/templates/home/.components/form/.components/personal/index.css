@@ -15,19 +15,33 @@ form fieldset:first-of-type
         & > :first-child
         {
             align-self: center;
+
+            font-size: .9rem;
         }
 
         & > :last-child
         {
             background: none;
-            border: none;
-            border-radius: 15px;
+            border: 2px solid var(--bg_primary);
+            box-shadow: 0 0 7px var(--bg_primary);
 
             caret-color: var(--bg_primary);
             color: var(--bg_secondary);
 
-            outline: thin solid var(--bg_primary);
+            outline: none;
             padding: 7px 20px;
         }
+    }
+
+    & > label:first-of-type > input,
+    & > label:nth-of-type(2) > input
+    {
+        border-radius: 5px 15px 15px 5px;
+    }
+
+    & > label:nth-of-type(3) > input,
+    & > label:last-of-type > select
+    {
+        border-radius: 15px 5px 5px 15px;
     }
 }
