@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+#context
+{
+    background: var(--bg_secondary);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px var(--bg_secondary);
+
+    color: var(--fg_primary);
+
+    align-items: center;
+    display: flex;
+    gap: 10px;
+
+    outline: 2px solid var(--fg_primary);
+    padding: 10px;
+
+    position: absolute;
+    inset: 10px 20px auto auto;
+
+    & button
+    {
+        background: none;
+        border: none;
+        border-radius: 15px;
+
+        color: inherit;
+        cursor: pointer;
+
+        align-items: center;
+        display: flex;
+        gap: 7px;
+
+        font: normal .9rem "Ubuntu", sans-serif;
+
+        outline: thin solid var(--bg_primary);
+        padding: 5px 10px;
+    }
+}
