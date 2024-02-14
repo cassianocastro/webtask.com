@@ -32,6 +32,8 @@ body > main
 {
     & > div
     {
+        display: flex;
+
         height: 100%;
     }
 }
