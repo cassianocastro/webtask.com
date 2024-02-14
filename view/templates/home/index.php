@@ -14,8 +14,6 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap">
   <link rel="stylesheet" type="text/css" href="view/templates/home/index.css">
 
-  <!-- <base href="view/templates/" target="_blank"> -->
-
   <title>Home | App</title>
 </head>
 <body>
