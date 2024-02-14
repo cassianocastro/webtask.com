@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-section
+section:first-of-type
 {
     height: 100%;
     width: 50%;
