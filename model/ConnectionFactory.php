@@ -6,8 +6,9 @@ use PDO, PDOException;
 /**
  *
  */
-class DataBaseConnection
+final class ConnectionFactory
 {
+
     private DataBaseConfig $config;
 
     public function __construct(DataBaseConfig $config)
@@ -15,7 +16,7 @@ class DataBaseConnection
         $this->config = $config;
     }
 
-    public function getConnection()
+    public function create()
     {
         try
         {
