@@ -9,7 +9,7 @@ use view\CityView;
 /**
  *
  */
-class AddressesController
+final class AddressesController
 {
 
     public function addAddress(array $city): void
@@ -22,7 +22,7 @@ class AddressesController
         {
             // echo ( $inserted ) ? "Registro inserido." : "Não foi possivel inserir.";
 
-            $this->showCities();
+            $this->showAddresses();
         }
     }
 
