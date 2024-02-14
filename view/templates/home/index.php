@@ -22,7 +22,7 @@
   <main>
     <div>
 
-      <?php require_once __DIR__ . '/.components/employee/index.php'; ?>
+      <?php require_once __DIR__ . '/.components/form/index.php'; ?>
 
       <?php require_once __DIR__ . '/.components/list/index.php'; ?>
 
