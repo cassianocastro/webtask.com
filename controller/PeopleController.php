@@ -29,6 +29,6 @@ final class PeopleController
 
         echo ( $inserted ) ? "Registro inserido." : "Não foi possível inserir.";
 
-        include_once '../view/templates/result.php';
+        require_once __DIR__ . '/../view/templates/result.php';
     }
 }

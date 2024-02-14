@@ -34,7 +34,7 @@ final class EmployeesController
         //"R$ " . number_format($register["wage"], 2, ",", ".")
         echo ( $inserted ) ? "Registro inserido." : "Não foi possivel inserir.";
 
-        include_once '../view/templates/result.php';
+        require_once __DIR__ . '/../view/templates/result.php';
     }
 
     public function updateEmployee(): void

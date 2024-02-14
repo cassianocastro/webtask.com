@@ -38,7 +38,7 @@ final class AddressesController
 
         // echo ( $inserted ) ? "Registro inserido." : "Não foi possivel inserir.";
 
-        include_once '../view/templates/result.php';
+        require_once __DIR__ . '/../view/templates/result.php';
     }
 
     public function showAddresses(): void
