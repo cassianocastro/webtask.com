@@ -1,19 +1,28 @@
 <?php
+declare(strict_types=1);
+
 namespace controller;
 
-use Model\DistrictDAO;
+use model\DistrictDAO;
 
-require_once '../model/DistrictDAO.php';
+/**
+ *
+ */
+final class DistrictsController
+{
 
-$district    = $_POST["district"];
+    public function addDistrict(): void
+    {
+        $district    = $_POST["district"];
+        $districtDAO = new DistrictDAO();
+        $wasInserted = $districtDAO->insert($district);
+        $resultSet   = $districtDAO->getAll();
 
-$districtDAO = new DistrictDAO();
-$wasInserted = $districtDAO->insert($district);
-$resultSet   = $districtDAO->getAll();
+        $caption = "Bairros cadastrados";
+        $columns = array("districtID", "districtName", "cityName");
 
-$caption = "Bairros cadastrados";
-$columns = array("districtID", "districtName", "cityName");
+        echo ( $wasInserted ) ? "Registro inserido." : "Não foi possivel inserir.";
 
-echo ( $wasInserted ) ? "Registro inserido." : "Não foi possivel inserir.";
-
-include_once '../view/templates/result.php';
+        include_once '../view/templates/result.php';
+    }
+}
