@@ -24,6 +24,8 @@
 
       <?php require_once __DIR__ . '/.components/employee/index.php'; ?>
 
+      <?php require_once __DIR__ . '/.components/list/index.php'; ?>
+
     </div>
   </main>
 
