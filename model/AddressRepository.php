@@ -3,15 +3,17 @@ declare(strict_types=1);
 
 namespace model;
 
+use PDO;
+
 /**
  *
  */
 final class AddressRepository
 {
 
-    private $connection;
+    private PDO $connection;
 
-    public function __construct($connection)
+    public function __construct(PDO $connection)
     {
         $this->connection = $connection;
     }
