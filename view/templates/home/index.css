@@ -8,6 +8,5 @@
 @import "../includes/aside/index.css";
 
 @import "./.components/layout.css";
-@import "./.components/employee/index.css";
-@import "./.components/address/index.css";
+@import "./.components/form/index.css";
 @import "./.components/list/index.css";
