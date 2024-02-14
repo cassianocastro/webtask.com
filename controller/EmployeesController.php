@@ -14,7 +14,8 @@ final class EmployeesController
     public function addEmployee(): void
     {
         $employee         = $_POST["employee"];
-        $employee["wage"] = parser($employee["wage"]);
+        $employee["wage"] = floatval($employee["wage"]);
+
         $employeeDAO      = new EmployeeDAO();
         $wasInserted      = $employeeDAO->insert($employee);
         $resultSet        = $employeeDAO->getAll();
@@ -35,9 +36,4 @@ final class EmployeesController
 
         include_once '../view/templates/result.php';
     }
-}
-
-function parser($value)
-{
-    return floatval($value);
 }
