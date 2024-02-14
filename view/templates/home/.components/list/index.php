@@ -31,5 +31,7 @@ $employees = [
         </ul>
       </div>
     </nav>
+
+    <?php require_once __DIR__ . '/.components/menu/index.php'; ?>
   </div>
 </section>
