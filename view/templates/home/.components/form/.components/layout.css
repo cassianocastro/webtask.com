@@ -57,12 +57,22 @@ section:first-of-type
         {
             & > :only-child
             {
-                display: flex;
-                flex-flow: column nowrap;
-                gap: 20px;
+                contain: layout;
+            }
 
-                overflow: hidden scroll;
+            & fieldset
+            {
+                background: var(--fg_primary);
+
                 padding: 10px 20px;
+
+                position: absolute;
+                inset: 0;
+
+                & > legend
+                {
+                    display: none;
+                }
             }
         }
 
