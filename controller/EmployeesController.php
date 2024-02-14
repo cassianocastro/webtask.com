@@ -36,4 +36,19 @@ final class EmployeesController
 
         include_once '../view/templates/result.php';
     }
+
+    public function updateEmployee(): void
+    {
+        // code ...
+    }
+
+    public function deleteEmployee(): void
+    {
+        // code ...
+    }
+
+    public function showEmployees(): void
+    {
+        // code ...
+    }
 }
