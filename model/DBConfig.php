@@ -10,18 +10,18 @@ final class DBConfig
 {
 
     private string $host;
-    private string $dataBank;
-    private string $dataBase;
-    private string $userName;
+    private string $driver;
+    private string $dbname;
+    private string $user;
     private string $password;
     private int $port;
 
-    public function __construct(string $host, string $dataBank, string $dataBase, string $userName, string $password, int $port)
+    public function __construct(string $host, string $driver, string $dbname, string $user, string $password, int $port)
     {
         $this->host     = $host;
-        $this->dataBank = $dataBank;
-        $this->dataBase = $dataBase;
-        $this->userName = $userName;
+        $this->driver   = $driver;
+        $this->dbname   = $dbname;
+        $this->user     = $user;
         $this->password = $password;
         $this->port     = $port;
     }
@@ -33,17 +33,17 @@ final class DBConfig
 
     public function getDataBank(): string
     {
-        return $this->dataBank;
+        return $this->driver;
     }
 
     public function getDataBase(): string
     {
-        return $this->dataBase;
+        return $this->dbname;
     }
 
     public function getUserName(): string
     {
-        return $this->userName;
+        return $this->user;
     }
 
     public function getPassword(): string
