@@ -88,17 +88,17 @@
   <menu>
     <li>
       <label>
-        <button type="button" title="Limpar todos os campos">Limpar</button>
+        <button type="button" title="Limpar todos os campos">Clear</button>
 
-        <span>campos</span>
+        <span>address</span>
       </label>
     </li>
 
     <li>
       <label>
-        <button type="button" title="Salvar dados de endereço">Salvar</button>
+        <button type="button" title="Salvar dados de endereço">Save</button>
 
-        <span>endereço</span>
+        <span>address</span>
       </label>
     </li>
   </menu>
