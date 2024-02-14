@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+@supports (scrollbar-color: transparent transparent) and (scrollbar-width: thin)
+{
+    :root
+    {
+        scrollbar-color: var(--bg_primary) var(--fg_primary);
+        scrollbar-width: thin;
+    }
+}
+
 :root
 {
     scroll-behavior: smooth;
