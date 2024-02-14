@@ -3,52 +3,47 @@
 form fieldset:nth-of-type(2)
 {
     display: grid;
-    grid: repeat(6, auto) / repeat(4, 24%);
+    grid: repeat(5, auto) / repeat(4, 24%);
     gap: 10px calc(4% / 4);
-
-    & > :first-child
-    {
-        grid-area: 1 / 1 / 2 / 5;
-    }
 
     & > :nth-child(2)
     {
-        grid-area: 2 / 1 / 3 / 3;
+        grid-area: 1 / 1 / 2 / 3;
     }
 
     & > :nth-child(3)
     {
-        grid-area: 2 / 3 / 3 / 5;
+        grid-area: 1 / 3 / 2 / 5;
     }
 
     & > :nth-child(4)
     {
-        grid-area: 3 / 1 / 4 / 3;
+        grid-area: 2 / 1 / 3 / 3;
     }
 
     & > :nth-child(5)
     {
-        grid-area: 3 / 3 / 4 / 5;
+        grid-area: 2 / 3 / 3 / 5;
     }
 
     & > :nth-child(6)
     {
-        grid-area: 4 / 1 / 5 / 4;
+        grid-area: 3 / 1 / 4 / 4;
     }
 
     & > :nth-child(7)
     {
-        grid-area: 4 / 4 / 5 / 5;
+        grid-area: 3 / 4 / 4 / 5;
     }
 
     & > :nth-child(8)
     {
-        grid-area: 5 / 1 / 6 / 5;
+        grid-area: 4 / 1 / 5 / 5;
     }
 
     & > :nth-child(9)
     {
-        grid-area: 6 / 1 / 7 / 5;
+        grid-area: 5 / 1 / 6 / 5;
     }
 
     & > label
@@ -95,7 +90,7 @@ form fieldset:nth-of-type(2)
         {
             align-items: center;
             display: flex;
-            gap: 5px;
+            gap: 7px;
 
             & > button
             {
