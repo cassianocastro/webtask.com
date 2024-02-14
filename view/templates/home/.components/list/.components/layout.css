@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+section:last-of-type
+{
+    height: 100%;
+    width: 50%;
+
+    & > div
+    {
+        /* border: thin solid black; */
+
+        padding: 10px 0;
+
+        height: inherit;
+
+        & > header
+        {
+            height: 10%;
+
+            & > :only-child
+            {
+                height: 100%;
+
+                padding: 5px 20px;
+            }
+
+            & h2
+            {
+                font: bold 1.1rem "Ubuntu", sans-serif;
+            }
+        }
+
+        & > nav
+        {
+            height: 90%;
+
+            & > :only-child
+            {
+                overflow: hidden scroll;
+                padding: 10px 20px;
+
+                height: 100%;
+            }
+
+            & ul
+            {
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 10px;
+            }
+        }
+    }
+}
