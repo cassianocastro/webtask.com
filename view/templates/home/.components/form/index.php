@@ -38,7 +38,7 @@
       <div>
         <menu>
           <li>
-            <button form="ef" type="button" title="">
+            <button form="ef" type="button" title="User">
               <figure>
                 <img src="view/img/user.png" alt="" height="50" width="50">
 
@@ -47,7 +47,7 @@
             </button>
           </li>
           <li>
-            <button form="ef" type="button" title="">
+            <button form="ef" type="button" title="Address">
               <figure>
                 <img src="view/img/location.png" alt="" height="50" width="50">
 
@@ -56,7 +56,7 @@
             </button>
           </li>
           <li>
-            <button form="ef" type="button" title="">
+            <button form="ef" type="button" title="Work">
               <figure>
                 <img src="view/img/worker.png" alt="" height="50" width="50">
 
