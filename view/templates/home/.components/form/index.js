@@ -7,23 +7,25 @@ function index()
 {
     let zIndex = 0;
 
+    const section = document.querySelector("#employee-form");
+
     {
-        let set = document.querySelector("form fieldset:first-of-type");
-        let button = document.querySelector("#employee-form aside menu > :first-child > button");
+        const set    = section.querySelector("form > div > :first-child");
+        const button = section.querySelector("button[title='Work']");
 
         button.addEventListener("click", () => set.style.zIndex = ++zIndex);
     }
 
     {
-        let set = document.querySelector("form fieldset:nth-of-type(2)");
-        let button = document.querySelector("#employee-form aside menu > :nth-child(2) > button");
+        const set    = section.querySelector("form > div > :nth-child(2)");
+        const button = section.querySelector("button[title='Address']");
 
         button.addEventListener("click", () => set.style.zIndex = ++zIndex);
     }
 
     {
-        let set = document.querySelector("form fieldset:last-of-type");
-        let button = document.querySelector("#employee-form aside menu > :last-child > button");
+        const set    = section.querySelector("form > div > :last-child");
+        const button = section.querySelector("button[title='User']");
 
         button.addEventListener("click", () => set.style.zIndex = ++zIndex);
     }
