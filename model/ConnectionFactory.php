@@ -11,23 +11,16 @@ use PDO, PDOException;
 final class ConnectionFactory
 {
 
-    private DBConfig $config;
-
-    public function __construct(DBConfig $config)
-    {
-        $this->config = $config;
-    }
-
-    public function create(): PDO
+    public function create(DBConfig $config): PDO
     {
         try
         {
             return new PDO(
-                $this->config->getDriver() . ":host=" .
-                $this->config->getHost() . ";" . "dbname=" .
-                $this->config->getDatabase(),
-                $this->config->getUsername(),
-                $this->config->getPassword(),
+                $config->getDriver() . ":host=" .
+                $config->getHost() . ";" . "dbname=" .
+                $config->getDatabase(),
+                $config->getUsername(),
+                $config->getPassword(),
             );
         }
         catch ( PDOException $e )
