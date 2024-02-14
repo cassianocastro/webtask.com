@@ -52,37 +52,37 @@
   <label>
     <span>Cidade</span>
 
-    <input type="text" name="" maxlength="100" required>
+    <input type="text" name="" placeholder="Porto Alegre" maxlength="100" required>
   </label>
 
   <label>
     <span>Bairro</span>
 
-    <input type="text" name="" maxlength="100" required>
+    <input type="text" name="" placeholder="Higienópolis" maxlength="100" required>
   </label>
 
   <label>
     <span>CEP</span>
 
-    <input type="text" name="" maxlength="100" required>
+    <input type="text" name="" placeholder="00000-00" maxlength="100" required>
   </label>
 
   <label>
     <span>Rua</span>
 
-    <input type="text" name="" maxlength="100" required>
+    <input type="text" name="" placeholder="Rua dos Bobos" maxlength="100" required>
   </label>
 
   <label>
     <span>Número</span>
 
-    <input type="text" name="" maxlength="100" required>
+    <input type="text" name="" placeholder="1423" maxlength="100" required>
   </label>
 
   <label>
     <span>Complemento</span>
 
-    <textarea name="" required></textarea>
+    <textarea name="" placeholder="Ao lado da lotérica" required></textarea>
   </label>
 
   <menu>

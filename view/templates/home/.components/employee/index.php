@@ -15,19 +15,19 @@
           <label>
             <span>Nome</span>
 
-            <input type="text" name="" maxlength="50" required>
+            <input type="text" name="" placeholder="John" maxlength="50" required>
           </label>
 
           <label>
             <span>Sobrenome</span>
 
-            <input type="text" name="" maxlength="100" required>
+            <input type="text" name="" placeholder="Doe" maxlength="100" required>
           </label>
 
           <label>
             <span>Idade</span>
 
-            <input type="number" name="" min="0" required>
+            <input type="number" name="" placeholder="18" min="0" required>
           </label>
 
           <label>
@@ -51,7 +51,7 @@
           <label>
             <span>Matrícula</span>
 
-            <input type="text" name="" maxlength="100" required>
+            <input type="text" name="" placeholder="123456789" maxlength="100" required>
           </label>
 
           <label>
@@ -63,7 +63,7 @@
           <label>
             <span>Salário</span>
 
-            <input type="number" name="" min="0" required>
+            <input type="number" name="" placeholder="1500.00" min="0" required>
           </label>
 
           <label>
