@@ -1,15 +1,17 @@
 <?php
 namespace model;
 
+use PDO;
+
 /**
  *
  */
 class PeopleRepository
 {
 
-    private $connection;
+    private PDO $connection;
 
-    function __construct(DataBaseConnection $connection)
+    function __construct(PDO $connection)
     {
         $this->connection = $connection;
     }
