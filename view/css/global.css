@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-html
+:root
 {
     scroll-behavior: smooth;
 
@@ -8,6 +8,17 @@ html
     --bg_secondary : #141301;
     --bg_ternary   : #B7B5B3;
     --fg_primary   : #E5E7E6;
+}
+
+::selection
+{
+    background: var(--bg_primary);
+    color: var(--fg_primary);
+}
+
+::placeholder
+{
+    color: var(--bg_secondary);
 }
 
 body
