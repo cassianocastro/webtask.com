@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace controller;
 
 use model\{ DBConfig, ConnectionFactory, AddressRepository, Table };
-use view\CityView;
+use view\View;
 
 /**
  *
@@ -47,7 +47,7 @@ final class AddressesController
         $connection = (new ConnectionFactory())->create($config);
         $resultSet  = (new AddressRepository($connection))->getAll();
 
-        (new CityView())->render(
+        (new View())->render(
             new Table(
                 "Cidades cadastradas",
                 [ "cityID", "cityName", "state" ],
