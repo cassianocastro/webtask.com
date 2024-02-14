@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace model;
 
 /**
@@ -14,9 +16,7 @@ final class DBConfig
     private string $password;
     private int $port;
 
-    function __construct(
-        string $host, string $dataBank, string $dataBase, string $userName, string $password, int $port
-    )
+    public function __construct(string $host, string $dataBank, string $dataBase, string $userName, string $password, int $port)
     {
         $this->host     = $host;
         $this->dataBank = $dataBank;
