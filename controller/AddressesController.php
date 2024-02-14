@@ -28,15 +28,15 @@ final class AddressesController
 
     public function updateAddress(): void
     {
-        $district    = $_POST["district"];
-        // $districtDAO = new DistrictDAO();
-        // $wasInserted = $districtDAO->insert($district);
-        // $resultSet   = $districtDAO->getAll();
+        $district   = $_POST["district"];
+        // $repository = new DistrictDAO();
+        // $inserted   = $repository->insert($district);
+        // $resultSet  = $repository->getAll();
 
         $caption = "Bairros cadastrados";
         $columns = [ "districtID", "districtName", "cityName" ];
 
-        // echo ( $wasInserted ) ? "Registro inserido." : "Não foi possivel inserir.";
+        // echo ( $inserted ) ? "Registro inserido." : "Não foi possivel inserir.";
 
         include_once '../view/templates/result.php';
     }

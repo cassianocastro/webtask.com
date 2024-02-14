@@ -16,9 +16,9 @@ final class EmployeesController
         $employee         = $_POST["employee"];
         $employee["wage"] = floatval($employee["wage"]);
 
-        $employeeDAO      = new EmployeeRepository();
-        $wasInserted      = $employeeDAO->insert($employee);
-        $resultSet        = $employeeDAO->getAll();
+        $repository = new EmployeeRepository();
+        $inserted   = $repository->insert($employee);
+        $resultSet  = $repository->getAll();
 
         $caption = "Funcionários cadastrados";
         $columns = [
@@ -32,7 +32,7 @@ final class EmployeesController
         ];
 
         //"R$ " . number_format($register["wage"], 2, ",", ".")
-        echo ( $wasInserted ) ? "Registro inserido." : "Não foi possivel inserir.";
+        echo ( $inserted ) ? "Registro inserido." : "Não foi possivel inserir.";
 
         include_once '../view/templates/result.php';
     }

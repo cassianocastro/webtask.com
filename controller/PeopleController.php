@@ -13,10 +13,10 @@ final class PeopleController
 
     public function addPerson(): void
     {
-        $person      = $_POST["person"];
-        $personDAO   = new PeopleRepository();
-        $wasInserted = $personDAO->insert($person);
-        $resultSet   = $personDAO->getAll();
+        $person     = $_POST["person"];
+        $repository = new PeopleRepository();
+        $inserted   = $repository->insert($person);
+        $resultSet  = $repository->getAll();
 
         $caption = "People";
         $columns = [
@@ -27,7 +27,7 @@ final class PeopleController
             "childs"
         ];
 
-        echo ( $wasInserted ) ? "Registro inserido." : "Não foi possível inserir.";
+        echo ( $inserted ) ? "Registro inserido." : "Não foi possível inserir.";
 
         include_once '../view/templates/result.php';
     }
