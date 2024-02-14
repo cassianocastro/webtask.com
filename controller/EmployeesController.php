@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace controller;
 
-use model\EmployeeDAO;
+use model\EmployeeRepository;
 
 /**
  *
@@ -16,7 +16,7 @@ final class EmployeesController
         $employee         = $_POST["employee"];
         $employee["wage"] = floatval($employee["wage"]);
 
-        $employeeDAO      = new EmployeeDAO();
+        $employeeDAO      = new EmployeeRepository();
         $wasInserted      = $employeeDAO->insert($employee);
         $resultSet        = $employeeDAO->getAll();
 

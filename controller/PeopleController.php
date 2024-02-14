@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace controller;
 
-use model\PersonDAO;
+use model\PeopleRepository;
 
 /**
  *
@@ -14,7 +14,7 @@ final class PeopleController
     public function addPerson(): void
     {
         $person      = $_POST["person"];
-        $personDAO   = new PersonDAO();
+        $personDAO   = new PeopleRepository();
         $wasInserted = $personDAO->insert($person);
         $resultSet   = $personDAO->getAll();
 
