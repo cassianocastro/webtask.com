@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace model;
 
 use PDO;
@@ -6,12 +8,12 @@ use PDO;
 /**
  *
  */
-class PeopleRepository
+final class PeopleRepository
 {
 
     private PDO $connection;
 
-    function __construct(PDO $connection)
+    public function __construct(PDO $connection)
     {
         $this->connection = $connection;
     }
