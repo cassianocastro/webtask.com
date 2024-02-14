@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+form fieldset:first-of-type
+{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+
+    & > label
+    {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 7px;
+
+        & > :first-child
+        {
+            align-self: center;
+        }
+
+        & > :last-child
+        {
+            background: none;
+            border: none;
+            border-radius: 15px;
+
+            caret-color: var(--bg_primary);
+            color: var(--bg_secondary);
+
+            outline: thin solid var(--bg_primary);
+            padding: 7px 20px;
+        }
+    }
+}
