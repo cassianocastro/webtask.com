@@ -1,10 +1,12 @@
 <?php
+declare(strict_types=1);
+
 namespace model;
 
 /**
  *
  */
-class AddressRepository
+final class AddressRepository
 {
 
     private $connection;
