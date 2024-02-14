@@ -1,37 +1,43 @@
 <?php
+declare(strict_types=1);
+
 namespace controller;
 
-use Model\EmployeeDAO;
+use model\EmployeeDAO;
 
-require_once '../model/EmployeeDAO.php';
+/**
+ *
+ */
+final class EmployeesController
+{
 
-ini_set('display_errors', 1);
-ini_set('display_startup_erros', 1);
-error_reporting(E_ALL);
+    public function addEmployee(): void
+    {
+        $employee         = $_POST["employee"];
+        $employee["wage"] = parser($employee["wage"]);
+        $employeeDAO      = new EmployeeDAO();
+        $wasInserted      = $employeeDAO->insert($employee);
+        $resultSet        = $employeeDAO->getAll();
+
+        $caption = "Funcionários cadastrados";
+        $columns = array(
+            "employeeID",
+            "completeName",
+            "registration",
+            "admission",
+            "wage",
+            "childs",
+            "office"
+        );
+
+        //"R$ " . number_format($register["wage"], 2, ",", ".")
+        echo ( $wasInserted ) ? "Registro inserido." : "Não foi possivel inserir.";
+
+        include_once '../view/templates/result.php';
+    }
+}
 
 function parser($value)
 {
     return floatval($value);
 }
-
-$employee         = $_POST["employee"];
-$employee["wage"] = parser($employee["wage"]);
-$employeeDAO      = new EmployeeDAO();
-$wasInserted      = $employeeDAO->insert($employee);
-$resultSet        = $employeeDAO->getAll();
-
-$caption = "Funcionários cadastrados";
-$columns = array(
-    "employeeID",
-    "completeName",
-    "registration",
-    "admission",
-    "wage",
-    "childs",
-    "office"
-);
-
-//"R$ " . number_format($register["wage"], 2, ",", ".")
-echo ( $wasInserted ) ? "Registro inserido." : "Não foi possivel inserir.";
-
-include_once '../view/templates/result.php';
