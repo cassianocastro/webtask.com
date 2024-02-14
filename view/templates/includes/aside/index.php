@@ -1,20 +1,17 @@
 <aside>
   <div>
-    <header>
-      <div>
-        <h2>Application</h2>
-      </div>
-    </header>
+    <menu>
+      <li>
+        <button type="button" title="">
+          <img src="view/img/hypnosis.png" alt="Spiral Icon" height="50" width="50">
+        </button>
+      </li>
 
-    <nav>
-      <div>
-        <ul>
-          <li><a href="people.php">Pessoas</a></li>
-          <li><a href="employee.php">Funcionários</a></li>
-          <li><a href="city.php">Cidades</a></li>
-          <li><a href="district.php">Bairros</a></li>
-        </ul>
-      </div>
-    </nav>
+      <li>
+        <button type="button" title="">
+          <img src="view/img/worker.png" alt="Worker Icon" height="25" width="25">
+        </button>
+      </li>
+    </menu>
   </div>
 </aside>
