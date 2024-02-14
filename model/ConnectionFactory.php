@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace model;
 
 use PDO, PDOException;
@@ -16,7 +18,7 @@ final class ConnectionFactory
         $this->config = $config;
     }
 
-    public function create()
+    public function create(): PDO
     {
         try
         {
