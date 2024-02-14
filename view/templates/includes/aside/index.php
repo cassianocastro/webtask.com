@@ -9,7 +9,7 @@
 
       <li>
         <button type="button" title="">
-          <img src="view/img/worker.png" alt="Worker Icon" height="25" width="25">
+          <img src="view/img/user.png" alt="User Icon" height="25" width="25">
         </button>
       </li>
     </menu>
