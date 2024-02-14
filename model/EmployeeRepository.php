@@ -1,6 +1,8 @@
 <?php
 namespace model;
 
+use PDO;
+
 /**
  *
  */
@@ -9,7 +11,7 @@ class EmployeeRepository implements IDAO
 
     private $connection;
 
-    function __construct(DataBaseConnection $connection)
+    function __construct(PDO $connection)
     {
         $this->connection = $connection;
     }
