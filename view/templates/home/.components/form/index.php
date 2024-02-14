@@ -1,9 +1,9 @@
-<section>
+<section id="employee-form">
   <div>
 
     <header>
       <div>
-        <h2>Cadastro de Funcionários</h2>
+        <h2>Employee's Register</h2>
       </div>
     </header>
 
