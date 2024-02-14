@@ -64,7 +64,7 @@
   <label>
     <span>CEP</span>
 
-    <input type="text" name="" placeholder="00000-00" maxlength="100" required>
+    <input type="text" name="" placeholder="00000-000" maxlength="100" required>
   </label>
 
   <label>
