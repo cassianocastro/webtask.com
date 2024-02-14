@@ -8,26 +8,31 @@ section:first-of-type
     & > div
     {
         display: grid;
-        grid: 10% 90% / repeat(2, 50%);
+        grid: 10% 90% / repeat(4, 25%);
 
         height: inherit;
 
         & > header
         {
-            grid-area: 1 / 1 / 2 / 2;
+            grid-area: 1 / 1 / 2 / 3;
         }
 
         & > form
         {
-            grid-area: 2 / 1 / 3 / 3;
+            grid-area: 2 / 1 / 3 / 4;
         }
 
         & > footer
         {
-            grid-area: 1 / 2 / 2 / 3;
+            grid-area: 1 / 3 / 2 / 5;
         }
 
-        & > :is(header, form, footer) > div
+        & > aside
+        {
+            grid-area: 2 / 4 / 3 / 5;
+        }
+
+        & > :is(header, form, footer, aside) > div
         {
             height: 100%;
         }
@@ -89,6 +94,60 @@ section:first-of-type
 
                     outline: none;
                     padding: 5px 20px;
+                }
+            }
+        }
+
+        & > aside
+        {
+            background: var(--bg_secondary);
+            color: var(--fg_primary);
+
+            & > :only-child
+            {
+                padding: 20px 0;
+            }
+
+            & menu
+            {
+                align-items: center;
+                display: flex;
+                flex-flow: column nowrap;
+                gap: 30px;
+
+                & button
+                {
+                    background: none;
+                    border: none;
+
+                    color: inherit;
+                    cursor: pointer;
+
+                    outline: none;
+                    padding: 5px 20px;
+
+                    & figure
+                    {
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+                        flex-flow: column nowrap;
+                        gap: 10px;
+
+                        & > img
+                        {
+                            background: var(--bg_primary);
+                            border-radius: 50%;
+
+                            outline: 2px outset transparent;
+                            padding: 7px;
+                        }
+                    }
+
+                    &:hover img
+                    {
+                        outline-color: var(--fg_primary);
+                    }
                 }
             }
         }
