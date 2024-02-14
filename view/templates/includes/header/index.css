@@ -23,6 +23,10 @@ body > header
 
         color: var(--fg_primary);
 
+        align-items: center;
+        display: inline-flex;
+        gap: 5px;
+
         font: bold 1rem "Ubuntu", sans-serif;
 
         padding: 7px 20px;
