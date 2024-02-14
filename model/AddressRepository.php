@@ -27,6 +27,27 @@ final class AddressRepository
         return $statement->execute();
     }
 
+    public function update(array $array): bool
+    {
+        $statement = $this->connection->prepare(
+            "INSERT INTO district(districtName, cityName) VALUES (?, ?)"
+        );
+        $statement->bindParam(1, $array["name"]);
+        $statement->bindParam(2, $array["cityName"]);
+
+        return $statement->execute();
+    }
+
+    public function delete(): array
+    {
+        $statement = $this->connection->prepare(
+            "SELECT * FROM district"
+        );
+        $statement->execute();
+
+        return $statement->fetchAll();
+    }
+
     public function getAll(): array
     {
         $statement = $this->connection->prepare(
@@ -35,5 +56,10 @@ final class AddressRepository
         $statement->execute();
 
         return $statement->fetchAll();
+    }
+
+    public function findByID()
+    {
+
     }
 }
