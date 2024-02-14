@@ -31,17 +31,17 @@ final class DBConfig
         return $this->host;
     }
 
-    public function getDataBank(): string
+    public function getDriver(): string
     {
         return $this->driver;
     }
 
-    public function getDataBase(): string
+    public function getDatabase(): string
     {
         return $this->dbname;
     }
 
-    public function getUserName(): string
+    public function getUsername(): string
     {
         return $this->user;
     }
