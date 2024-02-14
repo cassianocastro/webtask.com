@@ -12,16 +12,7 @@ html
 
 body
 {
-    background: #E5E7E6;
+    background: var(--fg_primary);
 
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
-
-    font-family: 'Roboto', sans-serif;
-}
-
-h1, h2, h3
-{
-    font-family: 'Staatliches', cursive;
+    font-family: "Ubuntu", sans-serif;
 }
