@@ -1,232 +1,33 @@
 @charset "UTF-8";
 
-section:first-of-type
+form fieldset:nth-of-type(3)
 {
-    height: 100%;
-    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
 
-    & > div
+    & > label
     {
-        /* border: thin solid black; */
-        padding: 10px 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 7px;
 
-        height: inherit;
-
-        overflow: hidden scroll;
-
-        & > header
+        & > :first-child
         {
-            & h2
-            {
-                font: bold large sans-serif;
-            }
+            align-self: center;
         }
 
-        & > form
+        & > :last-child
         {
-            & > :only-child
-            {
-                display: flex;
-                flex-flow: column nowrap;
-                gap: 20px;
+            background: none;
+            border: none;
+            border-radius: 5px;
 
-                & > :first-child
-                {
-                    display: flex;
-                    flex-flow: column nowrap;
-                    gap: 10px;
+            caret-color: var(--bg_primary);
+            color: var(--bg_secondary);
 
-                    & > label
-                    {
-                        display: flex;
-                        flex-flow: column nowrap;
-                        gap: 7px;
-
-                        & > :first-child
-                        {
-                            align-self: center;
-                        }
-
-                        & > :last-child
-                        {
-                            background: none;
-                            border: none;
-                            border-radius: 15px;
-
-                            caret-color: var(--bg_primary);
-                            color: var(--bg_secondary);
-
-                            outline: thin solid var(--bg_primary);
-                            padding: 7px 20px;
-                        }
-                    }
-
-                    & > fieldset
-                    {
-                        display: grid;
-                        grid: repeat(6, auto) / repeat(4, 24%);
-                        gap: 10px calc(4% / 4);
-
-                        & > :first-child
-                        {
-                            grid-area: 1 / 1 / 2 / 5;
-                        }
-
-                        & > :nth-child(2)
-                        {
-                            grid-area: 2 / 1 / 3 / 3;
-                        }
-
-                        & > :nth-child(3)
-                        {
-                            grid-area: 2 / 3 / 3 / 5;
-                        }
-
-                        & > :nth-child(4)
-                        {
-                            grid-area: 3 / 1 / 4 / 3;
-                        }
-
-                        & > :nth-child(5)
-                        {
-                            grid-area: 3 / 3 / 4 / 5;
-                        }
-
-                        & > :nth-child(6)
-                        {
-                            grid-area: 4 / 1 / 5 / 4;
-                        }
-
-                        & > :nth-child(7)
-                        {
-                            grid-area: 4 / 4 / 5 / 5;
-                        }
-
-                        & > :nth-child(8)
-                        {
-                            grid-area: 5 / 1 / 6 / 5;
-                        }
-
-                        & > :nth-child(9)
-                        {
-                            grid-area: 6 / 1 / 7 / 5;
-                        }
-
-                        & > label
-                        {
-                            display: flex;
-                            flex-flow: column nowrap;
-                            gap: 7px;
-
-                            & > :first-child
-                            {
-                                align-self: center;
-                            }
-
-                            & > :last-child
-                            {
-                                background: none;
-                                border: none;
-                                border-radius: 5px;
-
-                                caret-color: var(--bg_primary);
-                                color: var(--bg_secondary);
-
-                                outline: thin solid var(--bg_primary);
-                                padding: 7px 10px;
-                            }
-                        }
-
-                        & textarea
-                        {
-                            height: 20vh;
-                            resize: none;
-                        }
-
-                        & > menu
-                        {
-                            display: flex;
-                            flex-flow: column nowrap;
-                            gap: 5px;
-
-                            & label
-                            {
-                                align-items: center;
-                                display: flex;
-                                gap: 5px;
-
-                                & > button
-                                {
-                                    background: var(--bg_secondary);
-                                    border: none;
-                                    border-radius: 20px;
-
-                                    color: var(--fg_primary);
-                                    cursor: default;
-
-                                    outline: none;
-                                    padding: 5px 0;
-
-                                    width: 100px;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                & > :nth-child(2)
-                {
-                    display: flex;
-                    flex-flow: column nowrap;
-                    gap: 10px;
-
-                    & > label
-                    {
-                        display: flex;
-                        flex-flow: column nowrap;
-                        gap: 7px;
-
-                        & > :first-child
-                        {
-                            align-self: center;
-                        }
-
-                        & > :last-child
-                        {
-                            background: none;
-                            border: none;
-                            border-radius: 5px;
-
-                            caret-color: var(--bg_primary);
-                            color: var(--bg_secondary);
-
-                            outline: thin solid var(--bg_primary);
-                            padding: 7px 10px;
-                        }
-                    }
-                }
-
-                & > menu
-                {
-                    align-self: flex-end;
-                    align-items: center;
-                    display: flex;
-                    gap: 10px;
-
-                    & button
-                    {
-                        background: var(--bg_primary);
-                        border: none;
-                        border-radius: 20px;
-
-                        color: var(--fg_primary);
-                        cursor: pointer;
-
-                        outline: none;
-                        padding: 5px 20px;
-                    }
-                }
-            }
+            outline: thin solid var(--bg_primary);
+            padding: 7px 10px;
         }
     }
 }
