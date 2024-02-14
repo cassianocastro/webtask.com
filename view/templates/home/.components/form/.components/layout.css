@@ -111,6 +111,9 @@ section:first-of-type
         & > aside
         {
             background: var(--bg_secondary);
+            border-bottom: 3px dashed var(--bg_primary);
+            border-left: 5px solid var(--bg_primary);
+
             color: var(--fg_primary);
 
             & > :only-child
