@@ -10,11 +10,7 @@ error_reporting(E_ALL);
  */
 function index(): void
 {
-    // $city = [ "name" => "Quintão", "state" => "RS" ];
-
-    // (new controller\CitiesController())->addCity($city);
-
-    require_once __DIR__ . '/view/templates/home/index.php';
+    (new controller\HomeController())->showHomepage();
 }
 
 index();
