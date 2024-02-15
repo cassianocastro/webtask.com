@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-section:first-of-type
+#employee-form
 {
     height: 100%;
     width: 50%;
