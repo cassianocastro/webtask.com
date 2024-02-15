@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-form fieldset:nth-of-type(2)
+#employee-form fieldset:nth-of-type(2)
 {
     display: grid;
     grid: repeat(5, auto) / repeat(4, 24%);
