@@ -1,6 +1,7 @@
 "use strict";
 
 import { index as section } from "./.components/section/index.js";
+import { index as ballon } from "./.components/ballon/index.js";
 
 /**
  *
@@ -22,6 +23,7 @@ function index()
     }
 
     section();
+    ballon();
 }
 
 export { index };
