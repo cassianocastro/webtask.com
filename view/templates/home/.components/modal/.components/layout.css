@@ -2,11 +2,19 @@
 
 #details
 {
+    position: absolute;
+    inset: 70px auto auto 300px;
+    z-index: 2;
+
     height: 80vh;
     width: 50vw;
 
     & > :only-child
     {
+        box-shadow: 0 0 7px 2px var(--bg_secondary);
+
+        outline: 2px outset var(--fg_primary);
+
         height: 100%;
     }
 
@@ -156,12 +164,5 @@
                 padding-left: 10px;
             }
         }
-    }
-
-    &:modal
-    {
-        box-shadow: 0 0 7px 2px var(--bg_secondary);
-
-        outline: 2px outset var(--fg_primary);
     }
 }
