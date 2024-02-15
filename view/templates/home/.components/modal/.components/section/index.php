@@ -1,4 +1,4 @@
-<section>
+<section id="details-section">
   <div>
 
     <header>
