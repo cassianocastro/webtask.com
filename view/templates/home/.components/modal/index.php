@@ -9,8 +9,8 @@
         </h4>
 
         <menu>
-          <li><button type="button" class="material-icons" title="Drag window">drag_indicator</button></li>
-          <li><button type="button" class="material-icons" title="Close window">close</button></li>
+          <li><button type="button" class="material-icons" title="Drag">drag_indicator</button></li>
+          <li><button type="button" class="material-icons" title="Close">close</button></li>
         </menu>
       </div>
     </header>
