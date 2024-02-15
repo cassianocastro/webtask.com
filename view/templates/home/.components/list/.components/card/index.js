@@ -5,8 +5,9 @@
  */
 function index()
 {
-    const menu  = document.querySelector("#context");
-    const items = document.querySelectorAll(".item");
+    const dialog = document.querySelector("#details");
+    const menu   = document.querySelector("#context");
+    const items  = document.querySelectorAll(".item");
 
     for ( const item of items )
     {
@@ -17,6 +18,8 @@ function index()
 
             Object.assign(menu.style, styles);
         });
+
+        item.addEventListener("click", () => dialog.showModal());
     }
 
     document.addEventListener("click", () => menu.style.display = "none");
