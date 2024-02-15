@@ -1,0 +1,32 @@
+{
+    "name": "cassianocastro/webtask",
+    "description": "No description at this moment",
+    "readme": "./README.md",
+    "authors": [
+        {
+            "name": "Cassiano Castro",
+            "email": "development.castro@gmail.com",
+            "role": "Lead"
+        }
+    ],
+    "type": "project",
+    "license": "MIT",
+    "bin": [
+
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": "8.2.15"
+    },
+    "require-dev": {
+
+    }
+}
