@@ -19,7 +19,9 @@ function index()
             Object.assign(menu.style, styles);
         });
 
-        item.addEventListener("click", () => dialog.showModal());
+        const button = item.querySelector("button");
+
+        button.addEventListener("click", () => dialog.setAttribute("open", "open"));
     }
 
     document.addEventListener("click", () => menu.style.display = "none");
