@@ -1,5 +1,7 @@
 "use strict";
 
+import { index as section } from "./.components/section/index.js";
+
 /**
  *
  */
@@ -10,14 +12,16 @@ function index()
     {
         const button = dialog.querySelector("header [title='Close']");
 
-        button.addEventListener("click", () => dialog.close());
+        button.addEventListener("click", () => dialog.removeAttribute("open"));
     }
 
     {
         const button = dialog.querySelector("footer [title~='Close']");
 
-        button.addEventListener("click", () => dialog.close());
+        button.addEventListener("click", () => dialog.removeAttribute("open"));
     }
+
+    section();
 }
 
 export { index };
