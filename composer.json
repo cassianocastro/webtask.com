@@ -24,9 +24,7 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "php": "8.2.15"
-    },
-    "require-dev": {
-
+        "php": "8.2.15",
+        "twig/twig": "^3.8"
     }
 }
