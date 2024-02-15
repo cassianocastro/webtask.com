@@ -25,6 +25,8 @@
 
       <?php require_once __DIR__ . '/.components/list/index.php'; ?>
 
+      <?php require_once __DIR__ . '/.components/modal/index.php'; ?>
+
     </div>
   </main>
 
