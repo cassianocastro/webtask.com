@@ -20,11 +20,11 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video
 {
-	margin: 0;
-	padding: 0;
-	border: 0;
+	border: none;
 	font-size: 100%;
 	font: inherit;
+	margin: 0;
+	padding: 0;
 	vertical-align: baseline;
 }
 
@@ -55,7 +55,6 @@ blockquote, q
 blockquote:before, blockquote:after,
 q:before, q:after
 {
-	content: '';
 	content: none;
 }
 
@@ -65,16 +64,19 @@ table
 	border-spacing: 0;
 }
 
+dialog
+{
+    border: none;
+
+    /* margin: 0; */
+    padding: 0;
+}
+
 /*
     Apply a natural box layout model to all elements,
 	but allowing components to change
 */
-html
-{
-    box-sizing: border-box;
-}
-
 *, *:before, *:after
 {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
