@@ -1,17 +1,3 @@
-<?php
-$employees = [
-  "João da Silva Sauro",
-  "João da Silva Sauro",
-  "João da Silva Sauro",
-  "João da Silva Sauro",
-  "João da Silva Sauro",
-  "João da Silva Sauro",
-  "João da Silva Sauro",
-  "João da Silva Sauro",
-  "João da Silva Sauro"
-];
-?>
-
 <section id="employees">
   <div>
     <header>
