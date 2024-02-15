@@ -8,7 +8,7 @@
   <meta name="description" content="Aplicação de teste">
   <meta name="author" content="Cassiano Castro">
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com/css">
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
   <link rel="stylesheet" type="text/css" href="view/templates/home/index.css">
