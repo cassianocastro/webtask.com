@@ -111,7 +111,7 @@
         & > aside
         {
             background: var(--bg_secondary);
-            border-bottom: 3px dashed var(--bg_primary);
+            border-top: 4px dashed var(--bg_primary);
             border-left: 5px solid var(--bg_primary);
 
             color: var(--fg_primary);
