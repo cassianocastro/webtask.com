@@ -25,6 +25,6 @@ final class HomeController
             "João da Silva Sauro"
         ];
 
-        (new View())->render("home/index.php", ["employees" => $employees]);
+        (new View())->render("home/index.twig", ["employees" => $employees]);
     }
 }
