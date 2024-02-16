@@ -1,29 +1,45 @@
-CREATE TABLE IF NOT EXISTS city (
-    cityID   INT(11) NOT NULL,
-    cityName VARCHAR(100) NOT NULL,
-    state    VARCHAR(100) NOT NULL
+CREATE TABLE IF NOT EXISTS state (
+    ID SMALLINT UNSIGNED AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL UNIQUE,
+
+    PRIMARY KEY(ID)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
-CREATE TABLE IF NOT EXISTS district (
-    districtID   INT(11) NOT NULL,
-    districtName VARCHAR(100) NOT NULL,
-    cityName     VARCHAR(100) NOT NULL
+CREATE TABLE IF NOT EXISTS address (
+    ID         BIGINT(11) UNSIGNED AUTO_INCREMENT,
+    state      SMALLINT UNSIGNED NOT NULL,
+    city       VARCHAR(100) NOT NULL,
+    district   VARCHAR(100) NOT NULL,
+    street     VARCHAR(100) NOT NULL,
+    number     INT(11) NOT NULL,
+    cep        INT(11) NOT NULL,
+    complement TEXT,
+
+    PRIMARY KEY(ID),
+
+    FOREIGN KEY (state)
+    REFERENCES
+        state(ID)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
 CREATE TABLE IF NOT EXISTS employee (
-    employeeID   INT(11) NOT NULL,
-    completeName VARCHAR(300) NOT NULL,
+    ID      BIGINT(11) UNSIGNED AUTO_INCREMENT,
+    name    VARCHAR(50) DEFAULT NULL,
+    surname VARCHAR(100) DEFAULT NULL,
+    age     INT(11) DEFAULT NULL,
+    childs  SMALLINT(11) UNSIGNED DEFAULT 0,
+
+    PRIMARY KEY(ID)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
+CREATE TABLE IF NOT EXISTS contract (
+    ID           BIGINT(11) UNSIGNED AUTO_INCREMENT,
     registration VARCHAR(100) NOT NULL,
     admission    DATE NOT NULL,
     wage         FLOAT DEFAULT NULL,
-    childs       INT(11) DEFAULT 0,
-    office       VARCHAR(30) NOT NULL
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+    office       VARCHAR(30) NOT NULL,
 
-CREATE TABLE IF NOT EXISTS people (
-    personID  INT(11) NOT NULL,
-    firstName VARCHAR(50) DEFAULT NULL,
-    lastName  VARCHAR(100) DEFAULT NULL,
-    age       INT(11) DEFAULT NULL,
-    childs    INT(11) DEFAULT 0
+    PRIMARY KEY(ID)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
