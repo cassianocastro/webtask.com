@@ -1,5 +1,5 @@
 INSERT INTO
-    `city` (`cityID`, `cityName`, `state`)
+    city (cityID, cityName, state)
 VALUES
     (1, 'Porto Alegre', 'RS'),
     (2, 'Canoas', 'RS'),
@@ -9,7 +9,7 @@ VALUES
     (6, 'Rio de Janeiro', 'RJ');
 
 INSERT INTO
-    `district` (`districtID`, `districtName`, `cityName`)
+    district (districtID, districtName, cityName)
 VALUES
     (1, 'Sarandi', 'Porto Alegre'),
     (2, 'Rubem Berta', 'Porto Alegre'),
@@ -30,7 +30,7 @@ VALUES
     (17, '', '');
 
 INSERT INTO
-    `employee` (`employeeID`, `completeName`, `registration`, `admission`, `wage`, `childs`, `office`)
+    employee (employeeID, completeName, registration, admission, wage, childs, office)
 VALUES
     (1, 'Teste', '123', '2021-07-01', 1500, 2, '2'),
     (2, 'Teste2', '001', '2021-07-05', 3000, 3, '0'),
@@ -38,7 +38,7 @@ VALUES
     (4, 'João da Silva', '003', '2021-07-20', 10000, 3, 'Motorista');
 
 INSERT INTO
-    `people` (`personID`, `firstName`, `lastName`, `age`, `childs`)
+    people (personID, firstName, lastName, age, childs)
 VALUES
     (1, 'Teste', 'da Silva', 14, 3),
     (2, 'Teste2', 'da Silva2', 15, 1),
