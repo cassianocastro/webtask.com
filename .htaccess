@@ -1,0 +1,5 @@
+DirectoryIndex index.php
+
+# RewriteEngine on
+
+# RewriteRule "^home/(css|js)/(.*)\.(css|js)" "public/templates/home/$2.$3"
