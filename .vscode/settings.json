@@ -3,7 +3,8 @@
     "css.format.spaceAroundSelectorSeparator": true,
 
     "files.associations": {
-        "*.twig": "twig"
+        "*.twig": "twig",
+        "*.inc": "twig"
     },
     "emmet.includeLanguages": {
         "twig": "html"
