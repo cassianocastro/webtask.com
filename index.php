@@ -10,7 +10,7 @@ error_reporting(E_ALL);
  */
 function index(): void
 {
-    (new controller\HomeController())->showHomepage();
+    (new App\controller\HomeController())->showHomepage();
 }
 
 index();
