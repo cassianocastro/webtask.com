@@ -5,7 +5,6 @@ body > header
     & > div
     {
         background: var(--bg_primary);
-        box-shadow: 0 0 10px var(--bg_secondary);
 
         align-items: center;
         display: flex;
