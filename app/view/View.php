@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace view;
+namespace App\view;
 
-use App\model\Table;
+use Twig\{ Loader\FilesystemLoader, Environment };
 
 /**
  *
@@ -11,12 +11,20 @@ use App\model\Table;
 final class View
 {
 
-    public function render(Table $table): void
-    {
-        $caption   = $table->getCaption();
-        $columns   = $table->getColumns();
-        $resultSet = $table->getData();
+    private const TEMPLATES_PATH = "public/templates";
 
-        require_once 'templates/result.php';
+    public function render(string $html, array $context): void
+    {
+        $env = (new Environment(
+            new FilesystemLoader(self::TEMPLATES_PATH),
+            [
+                "cache" => false,
+                "charset" => "utf8",
+                "auto_reload" => true,
+                "strict_variables" => true
+            ]
+        ));
+
+        print $env->render($html, $context);
     }
 }
