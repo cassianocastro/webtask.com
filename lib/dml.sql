@@ -3,9 +3,6 @@ INSERT INTO
 VALUES
     ('Porto Alegre', 'RS'),
     ('Canoas', 'RS'),
-    ('', ''),
-    ('', ''),
-    ('', ''),
     ('Rio de Janeiro', 'RJ');
 
 INSERT INTO
@@ -20,14 +17,7 @@ VALUES
     ('Partenon', 'Porto Alegre'),
     ('São José', 'Porto Alegre'),
     ('Belem Novo', 'Porto Alegre'),
-    ('Belem Velho', 'Porto Alegre'),
-    ( '', ''),
-    ( '', ''),
-    ( '', ''),
-    ( '', ''),
-    ( '', ''),
-    ( '', ''),
-    ( '', '');
+    ('Belem Velho', 'Porto Alegre');
 
 INSERT INTO
     employee (completeName, registration, admission, wage, childs, office)
