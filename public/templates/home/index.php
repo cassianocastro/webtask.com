@@ -16,23 +16,21 @@
   <title>Home | App</title>
 </head>
 <body>
-  <?php require_once __DIR__ . '/../includes/header/index.php'; ?>
+  {{ include('@inc/header/index.php') }}
 
   <main>
     <div>
+      {{ include("@home/form/index.php") }}
 
-      <?php require_once __DIR__ . '/.components/form/index.php'; ?>
+      {{ include("@home/list/index.php") }}
 
-      <?php require_once __DIR__ . '/.components/list/index.php'; ?>
-
-      <?php require_once __DIR__ . '/.components/modal/index.php'; ?>
-
+      {{ include("@home/modal/index.php") }}
     </div>
   </main>
 
-  <?php require_once __DIR__ . '/../includes/footer/index.php'; ?>
+  {{ include('@inc/footer/index.php') }}
 
-  <?php require_once __DIR__ . '/../includes/aside/index.php'; ?>
+  {{ include('@inc/aside/index.php') }}
 
   <script defer type="module" src="public/templates/home/index.js"></script>
 </body>

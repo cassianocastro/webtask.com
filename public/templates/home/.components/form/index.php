@@ -9,11 +9,11 @@
 
     <form id="ef" action="./" method="post" autocomplete="off" spellcheck="true">
       <div>
-        <?php require_once __DIR__ . '/.components/employee/index.php'; ?>
+        {{ include("@home/form/.components/employee/index.php") }}
 
-        <?php require_once __DIR__ . '/.components/address/index.php'; ?>
+        {{ include("@home/form/.components/address/index.php") }}
 
-        <?php require_once __DIR__ . '/.components/personal/index.php'; ?>
+        {{ include("@home/form/.components/personal/index.php") }}
       </div>
     </form>
 

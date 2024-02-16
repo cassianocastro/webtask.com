@@ -15,7 +15,7 @@
       </div>
     </header>
 
-    <?php require_once __DIR__ . '/.components/section/index.php'; ?>
+    {{ include("@home/modal/.components/section/index.php") }}
 
     <footer>
       <div>
@@ -41,4 +41,4 @@
   </div>
 </dialog>
 
-<?php require_once __DIR__ . '/.components/ballon/index.php'; ?>
+{{ include("@home/modal/.components/ballon/index.php") }}
