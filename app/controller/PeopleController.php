@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App\controller;
 
-use model\PeopleRepository;
+use App\model\PeopleRepository;
 
 /**
  *
