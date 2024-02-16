@@ -52,6 +52,15 @@
                 flex-flow: column nowrap;
                 gap: 10px;
             }
+
+            & p
+            {
+                direction: ltr;
+
+                margin-top: 30px;
+
+                text-align: center;
+            }
         }
     }
 }
