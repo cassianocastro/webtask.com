@@ -1,35 +1,35 @@
 INSERT INTO
-    city (cityName, state)
+    state (name)
 VALUES
-    ('Porto Alegre', 'RS'),
-    ('Canoas', 'RS'),
-    ('Rio de Janeiro', 'RJ');
+    ('RS'),
+    ('RS'),
+    ('RJ');
 
 INSERT INTO
-    district (districtName, cityName)
+    address (state, city, district, street, number, complement)
 VALUES
-    ('Sarandi', 'Porto Alegre'),
-    ('Rubem Berta', 'Porto Alegre'),
-    ('Moinhos de Vento', 'Porto Alegre'),
-    ('Cavalhada', 'Porto Alegre'),
-    ('Nonoai', 'Porto Alegre'),
-    ('Auxiliadora', 'Porto Alegre'),
-    ('Partenon', 'Porto Alegre'),
-    ('São José', 'Porto Alegre'),
-    ('Belem Novo', 'Porto Alegre'),
-    ('Belem Velho', 'Porto Alegre');
+    (1, 'Porto Alegre', 'Sarandi', '', 0, NULL),
+    (1, 'Porto Alegre', 'Rubem Berta', '', 0, NULL),
+    (1, 'Porto Alegre', 'Moinhos de Vento', '', 0, NULL),
+    (1, 'Porto Alegre', 'Cavalhada', '', 0, NULL),
+    (1, 'Porto Alegre', 'Nonoai', '', 0, NULL),
+    (1, 'Porto Alegre', 'Auxiliadora', '', 0, NULL),
+    (1, 'Porto Alegre', 'Partenon', '', 0, NULL),
+    (1, 'Porto Alegre', 'São José', '', 0, NULL),
+    (1, 'Porto Alegre', 'Belem Novo', '', 0, NULL),
+    (1, 'Porto Alegre', 'Belem Velho', '', 0, NULL);
 
 INSERT INTO
-    employee (completeName, registration, admission, wage, childs, office)
+    employee (name, surname, age, childs)
 VALUES
-    ('Teste', '123', '2021-07-01', 1500, 2, '2'),
-    ('Teste2', '001', '2021-07-05', 3000, 3, '0'),
-    ('José da Silva', '002', '2021-07-02', 3000, 5, 'Gerente'),
-    ('João da Silva', '003', '2021-07-20', 10000, 3, 'Motorista');
-
-INSERT INTO
-    people (firstName, lastName, age, childs)
-VALUES
-    ('Teste', 'da Silva', 14, 3),
-    ('Teste2', 'da Silva2', 15, 1),
+    ('José', 'da Silva', 14, 3),
+    ('Ana' , 'Moura', 15, 1),
     ('João', 'da Silva', 43, 2);
+
+INSERT INTO
+    contract (registration, admission, wage, office)
+VALUES
+    ('001', '2021-07-05', 3000, 'Encarregado'),
+    ('002', '2021-07-02', 3000, 'Gerente'),
+    ('003', '2021-07-20', 1000, 'Motorista'),
+    ('004', '2021-07-01', 1500, 'Auxiliar');
