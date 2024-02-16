@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace App\controller;
 
+use App\view\View;
+
 /**
  *
  */
@@ -23,6 +25,6 @@ final class HomeController
             "João da Silva Sauro"
         ];
 
-        require_once __DIR__ . '/../../public/templates/home/index.php';
+        (new View())->render("home/index.php", $employees);
     }
 }
