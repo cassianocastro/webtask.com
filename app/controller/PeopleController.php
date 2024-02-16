@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace controller;
+namespace App\controller;
 
 use model\PeopleRepository;
 
