@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-@import "../../css/reset.css";
-@import "../../css/global.css";
-@import "../../css/frames.css";
+@import "../../styles/reset.css";
+@import "../../styles/global.css";
+@import "../../styles/frames.css";
 
 @import "../includes/header/index.css";
 @import "../includes/footer/index.css";
