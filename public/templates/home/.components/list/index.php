@@ -9,15 +9,16 @@
     <nav>
       <div>
         <ul>
-          <?php foreach ( $employees as &$employee ) : ?>
+          {% for employee in employees %}
             <li>
-              <?php require __DIR__ . '/.components/card/index.php'; ?>
+              {{ include("@home/list/.components/card/index.php") }}
             </li>
-          <?php endforeach; ?>
+          {% endfor %}
         </ul>
       </div>
     </nav>
 
-    <?php require_once __DIR__ . '/.components/menu/index.php'; ?>
+    {{ include("@home/list/.components/menu/index.php") }}
+
   </div>
 </section>
