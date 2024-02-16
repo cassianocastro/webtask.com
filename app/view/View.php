@@ -15,8 +15,13 @@ final class View
 
     public function render(string $html, array $context): void
     {
+        $loader = new FilesystemLoader(self::TEMPLATES_PATH);
+
+        $loader->addPath(self::TEMPLATES_PATH . "/includes", "inc");
+        $loader->addPath(self::TEMPLATES_PATH . "/home/.components", "home");
+
         $env = (new Environment(
-            new FilesystemLoader(self::TEMPLATES_PATH),
+            $loader,
             [
                 "cache" => false,
                 "charset" => "utf8",
