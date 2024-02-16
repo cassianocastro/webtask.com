@@ -8,13 +8,17 @@
 
     <nav>
       <div>
-        <ul>
-          {% for employee in employees %}
-            <li>
-              {{ include("@home/list/.components/card/index.php") }}
-            </li>
-          {% endfor %}
-        </ul>
+        {% if employees is not empty %}
+          <ul>
+            {% for employee in employees %}
+              <li>
+                {{ include("@home/list/.components/card/index.php") }}
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p>No employees registered!</p>
+        {% endif %}
       </div>
     </nav>
 
