@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/lib/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 ini_set('display_errors', true);
 ini_set('display_startup_errors', true);
