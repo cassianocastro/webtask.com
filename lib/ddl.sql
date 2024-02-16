@@ -1,29 +1,29 @@
 CREATE TABLE city (
-  cityID int(11) NOT NULL,
-  cityName varchar(100) NOT NULL,
-  state varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  cityID   INT(11) NOT NULL,
+  cityName VARCHAR(100) NOT NULL,
+  state    VARCHAR(100) NOT NULL
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
 CREATE TABLE district (
-  districtID int(11) NOT NULL,
-  districtName varchar(100) NOT NULL,
-  cityName varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  districtID   INT(11) NOT NULL,
+  districtName VARCHAR(100) NOT NULL,
+  cityName     VARCHAR(100) NOT NULL
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
 CREATE TABLE employee (
-  employeeID int(11) NOT NULL,
-  completeName varchar(300) NOT NULL,
-  registration varchar(100) NOT NULL,
-  admission date NOT NULL,
-  wage float DEFAULT NULL,
-  childs int(11) DEFAULT 0,
-  office varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  employeeID   INT(11) NOT NULL,
+  completeName VARCHAR(300) NOT NULL,
+  registration VARCHAR(100) NOT NULL,
+  admission    DATE NOT NULL,
+  wage         FLOAT DEFAULT NULL,
+  childs       INT(11) DEFAULT 0,
+  office       VARCHAR(30) NOT NULL
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
 CREATE TABLE people (
-  personID int(11) NOT NULL,
-  firstName varchar(50) DEFAULT NULL,
-  lastName varchar(100) DEFAULT NULL,
-  age int(11) DEFAULT NULL,
-  childs int(11) DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  personID  INT(11) NOT NULL,
+  firstName VARCHAR(50) DEFAULT NULL,
+  lastName  VARCHAR(100) DEFAULT NULL,
+  age       INT(11) DEFAULT NULL,
+  childs    INT(11) DEFAULT 0
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
