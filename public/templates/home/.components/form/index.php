@@ -40,7 +40,7 @@
           <li>
             <button form="ef" type="button" title="User">
               <figure>
-                <img src="view/img/user.png" alt="" height="50" width="50">
+                <img src="public/img/user.png" alt="" height="50" width="50">
 
                 <figcaption>User</figcaption>
               </figure>
@@ -49,7 +49,7 @@
           <li>
             <button form="ef" type="button" title="Address">
               <figure>
-                <img src="view/img/location.png" alt="" height="50" width="50">
+                <img src="public/img/location.png" alt="" height="50" width="50">
 
                 <figcaption>Address</figcaption>
               </figure>
@@ -58,7 +58,7 @@
           <li>
             <button form="ef" type="button" title="Work">
               <figure>
-                <img src="view/img/worker.png" alt="" height="50" width="50">
+                <img src="public/img/worker.png" alt="" height="50" width="50">
 
                 <figcaption>Work</figcaption>
               </figure>

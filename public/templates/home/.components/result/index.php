@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <base href="../view/templates/" target="_self">
+  <base href="../public/templates/" target="_self">
 
   <title>Resultados | App</title>
 </head>

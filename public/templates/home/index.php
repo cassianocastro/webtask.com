@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com/css">
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
-  <link rel="stylesheet" type="text/css" href="view/templates/home/index.css">
+  <link rel="stylesheet" type="text/css" href="public/templates/home/index.css">
 
   <title>Home | App</title>
 </head>
@@ -34,6 +34,6 @@
 
   <?php require_once __DIR__ . '/../includes/aside/index.php'; ?>
 
-  <script defer type="module" src="view/templates/home/index.js"></script>
+  <script defer type="module" src="public/templates/home/index.js"></script>
 </body>
 </html>

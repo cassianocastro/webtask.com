@@ -49,7 +49,7 @@
       <div>
         <figure>
           <img
-            src="view/img/hypnosis.png"
+            src="public/img/hypnosis.png"
             alt=""
             height="70"
             width="70"
