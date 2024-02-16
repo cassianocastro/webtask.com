@@ -12,7 +12,7 @@
           <ul>
             {% for employee in employees %}
               <li>
-                {{ include("@home/list/.components/card/index.php") }}
+                {{ include("@home/list/.components/card/index.twig") }}
               </li>
             {% endfor %}
           </ul>
@@ -22,7 +22,7 @@
       </div>
     </nav>
 
-    {{ include("@home/list/.components/menu/index.php") }}
+    {{ include("@home/list/.components/menu/index.twig") }}
 
   </div>
 </section>

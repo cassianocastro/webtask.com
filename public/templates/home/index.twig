@@ -16,21 +16,21 @@
   <title>Home | App</title>
 </head>
 <body>
-  {{ include('@inc/header/index.php') }}
+  {{ include('@inc/header/index.inc') }}
 
   <main>
     <div>
-      {{ include("@home/form/index.php") }}
+      {{ include("@home/form/index.twig") }}
 
-      {{ include("@home/list/index.php") }}
+      {{ include("@home/list/index.twig") }}
 
-      {{ include("@home/modal/index.php") }}
+      {{ include("@home/modal/index.twig") }}
     </div>
   </main>
 
-  {{ include('@inc/footer/index.php') }}
+  {{ include('@inc/footer/index.inc') }}
 
-  {{ include('@inc/aside/index.php') }}
+  {{ include('@inc/aside/index.inc') }}
 
   <script defer type="module" src="public/templates/home/index.js"></script>
 </body>
