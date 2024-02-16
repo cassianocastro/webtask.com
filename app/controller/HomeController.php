@@ -23,6 +23,6 @@ final class HomeController
             "João da Silva Sauro"
         ];
 
-        require_once __DIR__ . '/../view/templates/home/index.php';
+        require_once __DIR__ . '/../../view/templates/home/index.php';
     }
 }
