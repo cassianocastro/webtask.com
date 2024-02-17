@@ -1,30 +1,26 @@
 INSERT INTO
-    state (name)
+    region (name)
 VALUES
-    ('RS'),
-    ('RS'),
-    ('RJ');
+    ('Norte'),
+    ('Sul'),
+    ('Nordeste'),
+    ('Sudeste'),
+    ('Centro-Oeste');
 
 INSERT INTO
-    address (state, city, district, street, number, complement)
+    state (UF, name, region)
 VALUES
-    (1, 'Porto Alegre', 'Sarandi', '', 0, NULL),
-    (1, 'Porto Alegre', 'Rubem Berta', '', 0, NULL),
-    (1, 'Porto Alegre', 'Moinhos de Vento', '', 0, NULL),
-    (1, 'Porto Alegre', 'Cavalhada', '', 0, NULL),
-    (1, 'Porto Alegre', 'Nonoai', '', 0, NULL),
-    (1, 'Porto Alegre', 'Auxiliadora', '', 0, NULL),
-    (1, 'Porto Alegre', 'Partenon', '', 0, NULL),
-    (1, 'Porto Alegre', 'São José', '', 0, NULL),
-    (1, 'Porto Alegre', 'Belem Novo', '', 0, NULL),
-    (1, 'Porto Alegre', 'Belem Velho', '', 0, NULL);
+    ('RS', 'Rio Grande do Sul', 2),
+    ('SP', 'São Paulo', 4),
+    ('RJ', 'Rio de Janeiro', 4);
 
 INSERT INTO
-    employee (name, surname, age, childs)
+    address (state, city, district, street, number, cep, complement)
 VALUES
-    ('José', 'da Silva', 14, 3),
-    ('Ana' , 'Moura', 15, 1),
-    ('João', 'da Silva', 43, 2);
+    ('RS', 'Porto Alegre', 'Sarandi', '', 10, 12345000, NULL),
+    ('RS', 'Porto Alegre', 'Rubem Berta', '', 323, 12345000, NULL),
+    ('RS', 'Porto Alegre', 'Moinhos de Vento', '', 410, 12345000, NULL),
+    ('RS', 'Porto Alegre', 'Cavalhada', '', 600, 12345000, NULL);
 
 INSERT INTO
     contract (registration, admission, wage, office)
@@ -33,3 +29,11 @@ VALUES
     ('002', '2021-07-02', 3000, 'Gerente'),
     ('003', '2021-07-20', 1000, 'Motorista'),
     ('004', '2021-07-01', 1500, 'Auxiliar');
+
+INSERT INTO
+    employee (CPF, name, surname, age, sons, address, contract)
+VALUES
+    (12345678900, 'José', 'da Silva', 34, 3, 2, 1),
+    (98765432100, 'Ana' , 'Moura'   , 18, 1, 3, 4),
+    (12312312300, 'João', 'da Silva', 43, 2, 1, 2),
+    (45645645600, 'Bia' , 'Barroso' , 27, 0, 2, 3);
