@@ -26,19 +26,9 @@ final class DBConfig
         $this->port     = $port;
     }
 
-    public function getHost(): string
+    public function getDSN(): string
     {
-        return $this->host;
-    }
-
-    public function getDriver(): string
-    {
-        return $this->driver;
-    }
-
-    public function getDatabase(): string
-    {
-        return $this->dbname;
+        return "{$this->driver}:host={$this->host};dbname={$this->dbname};port={$this->port}";
     }
 
     public function getUsername(): string
@@ -49,10 +39,5 @@ final class DBConfig
     public function getPassword(): string
     {
         return $this->password;
-    }
-
-    public function getPort(): int
-    {
-        return $this->port;
     }
 }
