@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App\controller;
 
-use App\model\PeopleRepository;
+use App\model\ContractsRepository;
 
 /**
  *
@@ -14,7 +14,7 @@ final class ContractsController
     public function addContract(): void
     {
         $person     = $_POST["person"];
-        $repository = new PeopleRepository();
+        $repository = new ContractsRepository();
         $inserted   = $repository->insert($person);
         $resultSet  = $repository->getAll();
 
