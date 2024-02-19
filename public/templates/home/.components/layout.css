@@ -2,6 +2,9 @@
 
 body
 {
+    background: url(../../../img/background.png) 0 0 / cover no-repeat fixed;
+    backdrop-filter: blur(7px);
+
     display: grid;
     grid: 10vh 90vh / 10% 45% 45%;
 
