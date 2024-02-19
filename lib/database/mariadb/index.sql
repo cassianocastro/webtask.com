@@ -1,8 +1,7 @@
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+CREATE DATABASE IF NOT EXISTS webtask;
 
-START TRANSACTION;
+USE webtask;
 
--- import ddl.sql
--- import dml.sql
+source /var/www/api.webtask.com/lib/database/mariadb/ddl.sql
 
-COMMIT;
+source /var/www/api.webtask.com/lib/database/mariadb/dml.sql
