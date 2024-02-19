@@ -3,7 +3,8 @@ declare(strict_types=1);
 
 namespace App\controller;
 
-use App\model\{ DBConfig, ConnectionFactory, AddressRepository };
+use App\model\{ DBConfig, ConnectionFactory };
+use App\model\repository\AddressRepository;
 use App\view\View;
 
 /**
