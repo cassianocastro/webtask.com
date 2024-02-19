@@ -7,32 +7,38 @@
 
     & > div
     {
-        /* border: thin solid black; */
-
-        padding: 10px 0;
-
         height: inherit;
 
         & > header
         {
-            height: 10%;
+            height: 13%;
 
             & > :only-child
             {
-                height: 100%;
+                align-items: center;
+                display: flex;
 
-                padding: 5px 20px;
+                padding: 0 20px;
+
+                height: 100%;
             }
 
             & h2
             {
-                font: bold 1.1rem "Ubuntu", sans-serif;
+                background: var(--fg_primary);
+                border-radius: 5px 20px 20px 5px;
+
+                color: var(--bg_secondary);
+
+                font: bold 1rem "Ubuntu", sans-serif;
+
+                padding: 7px 15px;
             }
         }
 
         & > nav
         {
-            height: 90%;
+            height: 87%;
 
             & > :only-child
             {
