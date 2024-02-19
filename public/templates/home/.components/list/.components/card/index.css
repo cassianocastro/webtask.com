@@ -2,6 +2,7 @@
 
 .item
 {
+    background: var(--fg_primary);
     box-shadow: 0 0 7px 1px var(--bg_secondary);
     border-radius: 7px;
 
