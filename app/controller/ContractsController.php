@@ -3,7 +3,8 @@ declare(strict_types=1);
 
 namespace App\controller;
 
-use App\model\ContractsRepository;
+use App\model\{ DBConfig, ConnectionFactory };
+use App\model\repository\ContractsRepository;
 
 /**
  *
@@ -13,22 +14,11 @@ final class ContractsController
 
     public function addContract(): void
     {
-        $person     = $_POST["person"];
-        $repository = new ContractsRepository();
-        $inserted   = $repository->insert($person);
-        $resultSet  = $repository->getAll();
+        $contract   = $_POST[""];
 
-        $caption = "People";
-        $columns = [
-            "personID",
-            "firstName",
-            "lastName",
-            "age",
-            "childs"
-        ];
+        $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+        $connection = (new ConnectionFactory())->create($config);
 
-        echo ( $inserted ) ? "Registro inserido." : "Não foi possível inserir.";
-
-        require_once __DIR__ . '/../view/templates/result.php';
+        (new ContractsRepository($connection))->insert($contract);
     }
 }

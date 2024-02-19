@@ -3,7 +3,8 @@ declare(strict_types=1);
 
 namespace App\controller;
 
-use App\model\EmployeeRepository;
+use App\model\{ DBConfig, ConnectionFactory };
+use App\model\repository\EmployeeRepository;
 
 /**
  *
@@ -13,28 +14,13 @@ final class EmployeesController
 
     public function addEmployee(): void
     {
-        $employee         = $_POST["employee"];
-        $employee["wage"] = floatval($employee["wage"]);
+        $employee = $_POST[""];
+        $contract = $_POST[""];
 
-        $repository = new EmployeeRepository();
-        $inserted   = $repository->insert($employee);
-        $resultSet  = $repository->getAll();
+        $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+        $connection = (new ConnectionFactory())->create($config);
 
-        $caption = "Funcionários cadastrados";
-        $columns = [
-            "employeeID",
-            "completeName",
-            "registration",
-            "admission",
-            "wage",
-            "childs",
-            "office"
-        ];
-
-        //"R$ " . number_format($register["wage"], 2, ",", ".")
-        echo ( $inserted ) ? "Registro inserido." : "Não foi possivel inserir.";
-
-        require_once __DIR__ . '/../view/templates/result.php';
+        (new EmployeeRepository($connection))->insert($employee, $contract);
     }
 
     public function updateEmployee(): void

@@ -17,6 +17,7 @@ final class HomeController
     {
         $config     = new DBConfig("localhost", "mysql", "webtask", "php", "php", 3306);
         $connection = (new ConnectionFactory())->create($config);
+
         $employees  = (new EmployeeRepository($connection))->getAll();
 
         (new View())->render("home/index.twig", ["employees" => $employees]);
