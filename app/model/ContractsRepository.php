@@ -8,7 +8,7 @@ use PDO;
 /**
  *
  */
-final class PeopleRepository
+final class ContractsRepository
 {
 
     private PDO $connection;
