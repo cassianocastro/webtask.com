@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App\controller;
 
-use App\model\{ DBConfig, ConnectionFactory, AddressRepository, Table };
+use App\model\{ DBConfig, ConnectionFactory, AddressRepository };
 use App\view\View;
 
 /**
@@ -47,12 +47,6 @@ final class AddressesController
         $connection = (new ConnectionFactory())->create($config);
         $resultSet  = (new AddressRepository($connection))->getAll();
 
-        (new View())->render(
-            new Table(
-                "Cidades cadastradas",
-                [ "cityID", "cityName", "state" ],
-                $resultSet
-            )
-        );
+        // (new View())->render();
     }
 }
