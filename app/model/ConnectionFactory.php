@@ -16,11 +16,9 @@ final class ConnectionFactory
         try
         {
             return new PDO(
-                $config->getDriver() . ":host=" .
-                $config->getHost() . ";" . "dbname=" .
-                $config->getDatabase(),
+                $config->getDSN(),
                 $config->getUsername(),
-                $config->getPassword(),
+                $config->getPassword()
             );
         }
         catch ( PDOException $e )
