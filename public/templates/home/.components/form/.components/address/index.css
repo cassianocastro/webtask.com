@@ -2,7 +2,7 @@
 
 #employee-form fieldset:nth-of-type(2)
 {
-    display: grid;
+    display: none;
     grid: repeat(5, auto) / repeat(4, 24%);
     gap: 10px calc(4% / 4);
 
@@ -54,17 +54,25 @@
 
         & > :first-child
         {
-            align-self: center;
+            align-self: flex-start;
+
+            background: var(--bg_primary);
+            border-radius: 15px;
+
+            color: var(--fg_primary);
 
             font-size: .9rem;
+
+            opacity: .7;
+            padding: 3px 10px;
         }
 
         & > :last-child
         {
-            background: none;
+            background: var(--fg_primary);
             border: 2px solid var(--bg_primary);
             border-radius: 5px;
-            box-shadow: 0 0 7px var(--bg_primary);
+            box-shadow: 0 0 5px var(--bg_primary);
 
             caret-color: var(--bg_primary);
             color: var(--bg_secondary);
@@ -72,6 +80,11 @@
             outline: none;
             padding: 7px 10px;
         }
+    }
+
+    & select
+    {
+        appearance: none;
     }
 
     & textarea

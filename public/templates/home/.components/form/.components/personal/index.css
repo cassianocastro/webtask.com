@@ -2,35 +2,48 @@
 
 #employee-form fieldset:nth-of-type(3)
 {
-    display: flex;
+    display: none;
     flex-flow: column nowrap;
-    gap: 10px;
+    gap: 20px;
 
     & > label
     {
         display: flex;
         flex-flow: column nowrap;
-        gap: 7px;
+        gap: 15px;
 
         & > :first-child
         {
-            align-self: center;
+            align-self: flex-start;
+
+            background: var(--bg_primary);
+            border-radius: 5px;
+
+            color: var(--fg_primary);
 
             font-size: .9rem;
+
+            opacity: .7;
+            padding: 5px 10px;
         }
 
         & > :last-child
         {
-            background: none;
-            border: 2px solid var(--bg_primary);
-            box-shadow: 0 0 7px var(--bg_primary);
+            background: var(--fg_primary);
+            border: thin solid var(--bg_primary);
+            box-shadow: 0 0 5px 3px var(--bg_primary);
 
             caret-color: var(--bg_primary);
             color: var(--bg_secondary);
 
             outline: none;
-            padding: 7px 20px;
+            padding: 10px 15px;
         }
+    }
+
+    & select
+    {
+        appearance: none;
     }
 
     & > label:first-of-type > input,
