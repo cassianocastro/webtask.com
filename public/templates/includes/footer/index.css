@@ -5,6 +5,7 @@ body > footer
     & > div
     {
         background: var(--bg_secondary);
+        border-bottom: medium dashed var(--bg_primary);
 
         color: var(--fg_primary);
 
