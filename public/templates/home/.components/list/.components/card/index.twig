@@ -1,8 +1,8 @@
-<div class="item">
+<div id="{{ employee.CPF|e }}" class="item">
   <figure>
     <img src="public/img/worker.png" alt="Employee Icon" height="24" width="24">
 
-    <figcaption>{{ employee|e }}</figcaption>
+    <figcaption>{{ employee.name|e }} {{ employee.surname|e }}</figcaption>
   </figure>
 
   <button type="button" title="Show details">
