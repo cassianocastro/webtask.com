@@ -13,18 +13,11 @@ use App\view\View;
 final class AddressesController
 {
 
-    public function addAddress(array $city): void
+    public function addAddress(): void
     {
         $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
         $connection = (new ConnectionFactory())->create($config);
-        $inserted   = (new AddressRepository($connection))->insert($city);
-
-        if ( $inserted )
-        {
-            // echo ( $inserted ) ? "Registro inserido." : "Não foi possivel inserir.";
-
-            $this->showAddresses();
-        }
+        (new AddressRepository($connection))->insertAddressFromEmployee($address, $employeeID);
     }
 
     public function updateAddress(): void
