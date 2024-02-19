@@ -21,9 +21,10 @@ final class EmployeeRepository
     public function insert(array $array): bool
     {
         $statement = $this->connection->prepare(
+            // employee (CPF, name, surname, age, sons, contract)
             <<<SQL
                 INSERT INTO
-                    employee(completeName, registration, admission, wage, childs, office)
+                    employee
                 VALUES
                     (?, ?, ?, ?, ?, ?)
             SQL
@@ -41,7 +42,12 @@ final class EmployeeRepository
     public function getAll(): array
     {
         $statement = $this->connection->prepare(
-            "SELECT * FROM employee"
+            <<<SQL
+                SELECT
+                    CPF, name, surname, age, sons, contract
+                FROM
+                    employee
+            SQL
         );
         $statement->execute();
 

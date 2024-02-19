@@ -21,9 +21,10 @@ final class ContractsRepository
     public function insert(array $array): bool
     {
         $statement = $this->connection->prepare(
+            // contract (registration, admission, wage, office)
             <<<SQL
                 INSERT INTO
-                    people(firstName, lastName, age, childs)
+                    contract
                 VALUES
                     (?, ?, ?, ?)
             SQL
@@ -39,7 +40,12 @@ final class ContractsRepository
     public function getAll(): array
     {
         $statement = $this->connection->prepare(
-            "SELECT * FROM people"
+            <<<SQL
+                SELECT
+                    ID, registration, admission, wage, office
+                FROM
+                    contract
+            SQL
         );
         $statement->execute();
 

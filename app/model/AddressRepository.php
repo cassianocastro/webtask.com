@@ -21,7 +21,13 @@ final class AddressRepository
     public function insert(array $array): bool
     {
         $statement = $this->connection->prepare(
-            "INSERT INTO city (cityName, state) VALUES (?, ?)"
+            // (employeeID, uf, city, district, street, number, cep, complement)
+            <<<SQL
+                INSERT INTO
+                    address
+                VALUES
+                    (?, ?, ?, ?, ?, ?, ?, ?)
+            SQL
         );
         $statement->bindParam(1, $array["name"]);
         $statement->bindParam(2, $array["state"]);
@@ -32,7 +38,14 @@ final class AddressRepository
     public function update(array $array): bool
     {
         $statement = $this->connection->prepare(
-            "INSERT INTO district(districtName, cityName) VALUES (?, ?)"
+            <<<SQL
+                UPDATE
+                    address
+                SET
+                    uf = ?, city = ?, district = ?, street = ?, number = ?, cep = ?, complement = ?
+                WHERE
+                    employeeID = ?
+            SQL
         );
         $statement->bindParam(1, $array["name"]);
         $statement->bindParam(2, $array["cityName"]);
@@ -43,7 +56,12 @@ final class AddressRepository
     public function delete(): array
     {
         $statement = $this->connection->prepare(
-            "SELECT * FROM district"
+            <<<SQL
+                DELETE FROM
+                    address
+                WHERE
+                    employeeID = ?
+            SQL
         );
         $statement->execute();
 
@@ -53,7 +71,12 @@ final class AddressRepository
     public function getAll(): array
     {
         $statement = $this->connection->prepare(
-            "SELECT * FROM city"
+            <<<SQL
+                SELECT
+                    employeeID, uf, city, district, street, number, cep, complement
+                FROM
+                    address
+            SQL
         );
         $statement->execute();
 
