@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\model\repository;
 
 use PDO;
+use App\model\entities\Contract;
 
 /**
  *
@@ -18,28 +19,27 @@ final class ContractsRepository
         $this->connection = $connection;
     }
 
-    public function insert(array $array): bool
+    public function insert(Contract $contract): void
     {
         $statement = $this->connection->prepare(
-            // contract (registration, admission, wage, office)
             <<<SQL
                 INSERT INTO
-                    contract
+                    contract -- (registration, admission, wage, office)
                 VALUES
                     (?, ?, ?, ?)
             SQL
         );
-        $statement->bindParam(1, $array["nome"]);
-        $statement->bindParam(2, $array["sobrenome"]);
-        $statement->bindParam(3, $array["idade"]);
-        $statement->bindParam(4, $array["filhos"]);
+        $statement->bindParam(1, $contract->getRegistration());
+        $statement->bindParam(2, $contract->getAdmission());
+        $statement->bindParam(3, $contract->getWage());
+        $statement->bindParam(4, $contract->getOffice());
 
-        return $statement->execute();
+        $statement->execute();
     }
 
-    public function getAll(): array
+    public function getAll(): iterable
     {
-        $statement = $this->connection->prepare(
+        $statement = $this->connection->query(
             <<<SQL
                 SELECT
                     ID, registration, admission, wage, office
@@ -47,7 +47,6 @@ final class ContractsRepository
                     contract
             SQL
         );
-        $statement->execute();
 
         return $statement->fetchAll();
     }

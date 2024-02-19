@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\model\repository;
 
 use PDO;
+use App\model\entities\Address;
 
 /**
  *
@@ -18,24 +19,29 @@ final class AddressRepository
         $this->connection = $connection;
     }
 
-    public function insert(array $array): bool
+    public function insertAddressFromEmployee(Address $address, int $employee): void
     {
         $statement = $this->connection->prepare(
-            // (employeeID, uf, city, district, street, number, cep, complement)
             <<<SQL
                 INSERT INTO
-                    address
+                    address -- (employeeID, uf, city, district, street, number, cep, complement)
                 VALUES
                     (?, ?, ?, ?, ?, ?, ?, ?)
             SQL
         );
-        $statement->bindParam(1, $array["name"]);
-        $statement->bindParam(2, $array["state"]);
+        $statement->bindValue(1, $employee);
+        $statement->bindValue(2, $address->getUF());
+        $statement->bindValue(3, $address->getCity());
+        $statement->bindValue(4, $address->getDistrict());
+        $statement->bindValue(5, $address->getStreet());
+        $statement->bindValue(6, $address->getNumber());
+        $statement->bindValue(7, $address->getCEP());
+        $statement->bindValue(8, $address->getComplement());
 
-        return $statement->execute();
+        $statement->execute();
     }
 
-    public function update(array $array): bool
+    public function updateAddressFromEmployee(Address $address, int $employee): void
     {
         $statement = $this->connection->prepare(
             <<<SQL
@@ -47,13 +53,19 @@ final class AddressRepository
                     employeeID = ?
             SQL
         );
-        $statement->bindParam(1, $array["name"]);
-        $statement->bindParam(2, $array["cityName"]);
+        $statement->bindValue(1, $address->getUF());
+        $statement->bindValue(2, $address->getCity());
+        $statement->bindValue(3, $address->getDistrict());
+        $statement->bindValue(4, $address->getStreet());
+        $statement->bindValue(5, $address->getNumber());
+        $statement->bindValue(6, $address->getCEP());
+        $statement->bindValue(7, $address->getComplement());
+        $statement->bindValue(8, $employee);
 
-        return $statement->execute();
+        $statement->execute();
     }
 
-    public function delete(): array
+    public function deleteAddressFromEmployee(): void
     {
         $statement = $this->connection->prepare(
             <<<SQL
@@ -63,14 +75,15 @@ final class AddressRepository
                     employeeID = ?
             SQL
         );
-        $statement->execute();
 
-        return $statement->fetchAll();
+        // $statement->bindValue(1, $employee);
+
+        $statement->execute();
     }
 
-    public function getAll(): array
+    public function getAddressesFromEmployee(): iterable
     {
-        $statement = $this->connection->prepare(
+        $statement = $this->connection->query(
             <<<SQL
                 SELECT
                     employeeID, uf, city, district, street, number, cep, complement
@@ -78,7 +91,6 @@ final class AddressRepository
                     address
             SQL
         );
-        $statement->execute();
 
         return $statement->fetchAll();
     }

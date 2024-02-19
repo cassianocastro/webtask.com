@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\model\repository;
 
 use PDO;
+use App\model\entities\Employee;
 
 /**
  *
@@ -18,30 +19,29 @@ final class EmployeeRepository
         $this->connection = $connection;
     }
 
-    public function insert(array $array): bool
+    public function insert(Employee $employee, int $contract): void
     {
         $statement = $this->connection->prepare(
-            // employee (CPF, name, surname, age, sons, contract)
             <<<SQL
                 INSERT INTO
-                    employee
+                    employee -- (CPF, name, surname, age, sons, contract)
                 VALUES
                     (?, ?, ?, ?, ?, ?)
             SQL
         );
-        $statement->bindParam(1, $array["name"]);
-        $statement->bindParam(2, $array["registration"]);
-        $statement->bindParam(3, $array["admission"]);
-        $statement->bindParam(4, $array["wage"]);
-        $statement->bindParam(5, $array["sons"]);
-        $statement->bindParam(6, $array["office"]);
+        $statement->bindParam(1, $employee->getCPF());
+        $statement->bindParam(2, $employee->getName());
+        $statement->bindParam(3, $employee->getSurname());
+        $statement->bindParam(4, $employee->getAge());
+        $statement->bindParam(5, $employee->getSons());
+        $statement->bindParam(6, $contract);
 
-        return $statement->execute();
+        $statement->execute();
     }
 
-    public function getAll(): array
+    public function getAll(): iterable
     {
-        $statement = $this->connection->prepare(
+        $statement = $this->connection->query(
             <<<SQL
                 SELECT
                     CPF, name, surname, age, sons, contract
@@ -49,7 +49,6 @@ final class EmployeeRepository
                     employee
             SQL
         );
-        $statement->execute();
 
         return $statement->fetchAll();
     }
