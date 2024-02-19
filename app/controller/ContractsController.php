@@ -8,10 +8,10 @@ use App\model\PeopleRepository;
 /**
  *
  */
-final class PeopleController
+final class ContractsController
 {
 
-    public function addPerson(): void
+    public function addContract(): void
     {
         $person     = $_POST["person"];
         $repository = new PeopleRepository();
