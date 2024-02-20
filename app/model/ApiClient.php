@@ -4,7 +4,7 @@ namespace App\model;
 /**
  *
  */
-class Table
+class ApiClient
 {
 
     private string $caption;
