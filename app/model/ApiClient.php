@@ -6,14 +6,14 @@ namespace App\model;
 /**
  *
  */
-class ApiClient
+final class ApiClient
 {
 
     private const API_URL = "http://www.api.webtask.com";
 
-    public function getData(): iterable
+    public function getResource(string $resource = ""): iterable
     {
-        $content = file_get_contents(self::API_URL);
+        $content = file_get_contents(self::API_URL . $resource);
         $data    = json_decode($content);
 
         return $data;
