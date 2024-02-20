@@ -14,7 +14,7 @@ final class HomeController
 
     public function showHomepage(): void
     {
-        $data = (new ApiClient())->getData();
+        $data = (new ApiClient())->getResource("/employees");
 
         (new View())->render("home/index.twig", ["employees" => $data]);
     }
