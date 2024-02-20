@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace App\model;
 
 /**
@@ -7,29 +9,13 @@ namespace App\model;
 class ApiClient
 {
 
-    private string $caption;
-    private array $columns;
-    private array $data;
+    private const API_URL = "http://www.api.webtask.com";
 
-    function __construct(string $caption, array $columns, array $data)
+    public function getData(): iterable
     {
-        $this->caption = $caption;
-        $this->columns = $columns;
-        $this->data    = $data;
-    }
+        $content = file_get_contents(self::API_URL);
+        $data    = json_decode($content);
 
-    public function getCaption(): string
-    {
-        return $this->caption;
-    }
-
-    public function getColumns(): array
-    {
-        return $this->columns;
-    }
-
-    public function getData(): array
-    {
-        return $this->data;
+        return $data;
     }
 }
