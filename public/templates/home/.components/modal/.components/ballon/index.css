@@ -1,50 +1,105 @@
 @charset "UTF-8";
 
-.ballon
+#ballon
 {
-    background: white;
-    border-radius: 7px;
-    box-shadow: 0 0 10px 2px var(--bg_secondary);
-
-    contain: layout;
-
-    align-items: center;
-    display: none;
-    gap: 15px;
-
-    outline: 2px solid var(--bg_secondary);
-    padding: 15px 15px 10px;
-
     position: absolute;
+    inset: auto calc(50vw / 4) calc(80vh / 4) auto;
     z-index: 3;
 
-    & > p
+    height: 200px;
+
+    & > :only-child
     {
-        font: normal .9rem/1.3 "Ubuntu", sans-serif;
+        box-shadow: 0 0 7px 2px var(--bg_secondary);
+
+        outline: 2px outset var(--fg_primary);
+
+        height: 100%;
     }
 
-    & > menu
+    & > div > header
     {
-        align-items: center;
-        display: flex;
-        gap: 5px;
+        height: 15%;
 
-        position: absolute;
-        inset: -17px 17px auto auto;
+        & > :only-child
+        {
+            background: var(--bg_secondary);
+
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+
+            padding: 7px 10px;
+
+            height: 100%;
+        }
+
+        & menu
+        {
+            align-items: center;
+            display: flex;
+            gap: 5px;
+
+            & button
+            {
+                background: var(--bg_primary);
+                border: none;
+                border-radius: 50%;
+
+                color: var(--fg_primary);
+                cursor: pointer;
+
+                font-size: 14px;
+
+                outline: none;
+                padding: 3px;
+            }
+        }
+    }
+
+    & p
+    {
+        font: normal .9rem/1.3 "Ubuntu", sans-serif;
+
+        padding: 15px 20px;
+
+        height: 55%;
+    }
+
+    & > div > footer
+    {
+        height: 30%;
+
+        & > :only-child
+        {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+
+            height: 100%;
+        }
 
         & button
         {
             background: var(--bg_primary);
             border: none;
-            border-radius: 50%;
+            border-radius: 5px;
 
             color: var(--fg_primary);
             cursor: pointer;
 
-            font-size: 18px;
+            align-items: center;
+            display: flex;
+            gap: 5px;
+            justify-content: center;
 
             outline: none;
-            padding: 5px;
+            padding: 5px 15px;
+
+            & > [class]
+            {
+                font-size: 18px;
+            }
         }
     }
 }
