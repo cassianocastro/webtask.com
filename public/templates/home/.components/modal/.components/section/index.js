@@ -5,11 +5,11 @@
  */
 function index()
 {
-    const ballon = document.querySelector(".ballon");
+    const ballon = document.querySelector("#ballon");
     const dialog = document.querySelector("#details");
     const menu   = dialog.querySelector("#details-section aside menu");
 
-    dialog.addEventListener("click", () => ballon.style.display = "none");
+    dialog.addEventListener("click", () => ballon.close());
 
     {
         const button = menu.querySelector(":first-child > button");
@@ -25,9 +25,7 @@ function index()
         button.addEventListener("click", (e) => {
             e.stopImmediatePropagation();
 
-            const styles = { display: "flex", inset: `${e.y + 20}px auto auto ${e.x + 20}px` };
-
-            Object.assign(ballon.style, styles);
+            ballon.show();
         });
     }
 }
